@@ -1,4 +1,5 @@
 #include "vex.h"
+#include "robot_config.cpp"
 
 using namespace vex;
 
