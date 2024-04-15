@@ -18,8 +18,8 @@
 // https://wiki.purduesigbots.com/
 
 #include "vex.h"
-#include "drive.cpp"
-#include "robot_config.cpp"
+#include "drive.h"
+#include "robot_config.h"
 
 using namespace vex;
 
