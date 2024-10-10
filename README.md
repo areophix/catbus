@@ -1,1 +1,5 @@
-omg this thing is so petty it HAS to have a readme thats crazy
+cad
+https://gmail3718588.autodesk360.com/g/projects/20231113698207226/data/dXJuOmFkc2sud2lwcHJvZDpmcy5mb2xkZXI6Y28uOWNneUNsLVBScE9jTllKaTlIVTEzZw
+
+notebook
+https://docs.google.com/presentation/d/1xcWTV0dvDl_5Uo9sgPo9Tbc2M1a2kkVWPTACB7U0Isk/edit?usp=sharing
