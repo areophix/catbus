@@ -11,10 +11,12 @@ brain  Brain;
 controller Controller = controller(primary); // device names are usually capitilized cause lowercase ones are keywords
                                              // and the compiler will freak out cause it cant tell them apart
                                              
-motor LF = motor(PORT20, ratio6_1, true); // brain port the device is plugged into, cartridge ratio (different 
+motor LF = motor(PORT1, ratio6_1, true); // brain port the device is plugged into, cartridge ratio (different 
                                          // motors have diff cartridges for speed or strength), true = reversed, false = normal
-motor LB = motor(PORT10, ratio6_1, true);
+motor LB = motor(PORT2, ratio6_1, true);
 
-motor RF = motor(PORT12, ratio6_1, false);
-motor RB = motor(PORT1, ratio6_1, false);
+motor RF = motor(PORT3, ratio6_1, false);
+motor RB = motor(PORT4, ratio6_1, false);
+
+motor left_arm = motor(PORT5, ratio36_1, )
 // the false ones are reversed due to their orientation you'll see why next week when we build it :D

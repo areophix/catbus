@@ -18,20 +18,13 @@
 // https://wiki.purduesigbots.com/
 
 #include "vex.h"
-#include "drive.h"
 #include "robot_config.h"
+#include "robot_controls.h"
 
 using namespace vex;
 
 // A global instance of competition
 competition Competition;
-
-extern controller Controller;
-
-extern motor FR;
-extern motor FL;
-extern motor BR;
-extern motor BL;
 
 // these other functions  (aka methods) are left blank cause this program is only for a simple 4 motor driver controlled drivebase.
 // the functions are used for actual competitions where they'll automatically run these. 
@@ -74,44 +67,7 @@ void autonomous(void) {
 /*  You must modify the code to add your own robot specific commands here.   */
 /*---------------------------------------------------------------------------*/
 
-void devices_check() {
-  if (LF.installed() && RF.installed() && LB.installed() && RB.installed())
-  {
-    Controller.Screen.print("devices connected :D");
-  }
-  else
-  {
-    Controller.Screen.print("a device is disconnected D:");
-  }
-}
 
-void usercontrol(void) {  
-  brakeType driveBrake = coast; // ???
-  devices_check(); 
-  while (1) // keeps checking the controller in a loop to get updates on whether or not its being moved
-  { // the drive_brake, voltDrive, and driveCurve methods are in drive.cpp
-    if (Controller.ButtonA.pressing()) { 
-      twirl();
-      drive_brake(driveBrake);
-    }
-    if ((abs(Controller.Axis3.position(pct)) < 2) && (abs(Controller.Axis2.position(pct)) < 2)) {
-      // sometimes the controller's joysticks will be slightly uncentered, which will return axis values slightly > 0, 
-      // which will move the motors. (the farther from the center the joysticks are, the larger value they return)
-
-      // this if statement says that if the joysticks are slightly misaligned so that they are returning a value less than
-      // 2, then they are close enough to the center to be considered a value of 0, so we brake the motors
-      // this tactic is called a deadzone
-      // https://wiki.purduesigbots.com/software/robotics-basics/joystick-deadzones
-      drive_brake(driveBrake);
-    }
-    else
-    {
-      volt_drive(drive_curve(Controller.Axis3.position()), drive_curve(Controller.Axis2.position()), 0);
-    }
-    this_thread::sleep_for(15); // wait so it doesn't burn out from constantly running poor lil guy
-
-  }
-}
 
 //
 // Main will set up the competition functions and callbacks.

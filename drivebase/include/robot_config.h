@@ -10,3 +10,6 @@ extern motor LF;
 extern motor LB;
 extern motor RF;
 extern motor RB;
+
+extern motor left_arm;
+extern motor right_arm;
