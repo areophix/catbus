@@ -55,11 +55,14 @@ Arm_State arm_controls(Arm_State state) {
         if(Controller.ButtonX.pressing()) {
             return intake;
         }
-        else if(Controller.ButtonR1.pressing()) {
-
+        else if(Controller.ButtonR1.pressing()) {an
+            right_arm.spin(directionType::fwd, 50, velocityUnits::pct)//raises right arm??? I have no idea if any of this works.I copied this from a youtube tutorial made in 2020 :(
         }
         else if(Controller.ButtonR2.pressing()) {
-
+            right_arm.spin(directionType::rev, 50, velocityUnits::pct)//lowers right arm...maybe?
+        }
+        else{
+          right_arm.stop(BrakeType::hold);
         }
     }
     else {
