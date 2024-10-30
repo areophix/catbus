@@ -29,15 +29,7 @@ competition Competition;
 // these other functions  (aka methods) are left blank cause this program is only for a simple 4 motor driver controlled drivebase.
 // the functions are used for actual competitions where they'll automatically run these. 
 
-/*---------------------------------------------------------------------------*/
-/*                          Pre-Autonomous Functions                         */
-/*                                                                           */
-/*  You may want to perform some actions before the competition starts.      */
-/*  Do them in the following function.  You must return from this function   */
-/*  or the autonomous and usercontrol tasks will not be started.  This       */
-/*  function is only called once after the V5 has been powered on and        */
-/*  not every time that the robot is disabled.                               */
-/*---------------------------------------------------------------------------*/
+// REMEMBER TO PULL FROM GITHUB BEFORE STARTING!!
 
 void pre_auton(void) {
 

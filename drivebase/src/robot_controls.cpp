@@ -9,10 +9,6 @@ void usercontrol(void) {
   while (1) // keeps checking the controller in a loop to get updates on whether or not its being moved
   { // the drive_brake, voltDrive, and driveCurve methods are in drive.cpp
     arm_state = arm_controls(arm_state);
-    if (Controller.ButtonA.pressing()) { 
-      twirl();
-      drive_brake(driveBrake);
-    }
     if ((abs(Controller.Axis3.position(pct)) < 2) && (abs(Controller.Axis2.position(pct)) < 2)) {
       // sometimes the controller's joysticks will be slightly uncentered, which will return axis values slightly > 0, 
       // which will move the motors. (the farther from the center the joysticks are, the larger value they return)
@@ -46,14 +42,25 @@ void devices_check() {
 Arm_State arm_controls(Arm_State state) {
     if(state == intake) {
         if(Controller.ButtonX.pressing()) {
-            return arm;
+          return arm;
+        }
+        else if(Controller.ButtonR1.pressing()) {
+          
+        }
+        else if(Controller.ButtonR2.pressing()) {
+
         }
     }
     else if(state == arm) {
         if(Controller.ButtonX.pressing()) {
             return intake;
         }
-        // ajefboeawiuewf
+        else if(Controller.ButtonR1.pressing()) {
+
+        }
+        else if(Controller.ButtonR2.pressing()) {
+
+        }
     }
     else {
         Brain.Screen.print("how dare you >:C");

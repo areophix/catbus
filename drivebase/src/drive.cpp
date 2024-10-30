@@ -22,16 +22,3 @@ void drive_brake(vex::brakeType Brake) {
     LB.stop(Brake);
     RB.stop(Brake);
 }
-
-void twirl() {
-    LF.spinFor(2, sec, 100, rpm); // spins for two secs
-    LB.spinFor(2, sec, 100, rpm); // time, time units, velocity, velocity units
-
-    RF.spinFor(2, sec, -100, rpm); // spins the right side's motors in the opposite direction    
-    RB.spinFor(2, sec, -100, rpm); // (hence the negative velocity)
-  
-    // technically u could just ask the motors to go in reverse but that gets hard
-    // to keep track of so normally ppl just give a negative velocity when they wanna go backward
-
-    wait(100, msec);
-}

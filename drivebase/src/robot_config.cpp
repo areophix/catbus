@@ -14,9 +14,11 @@ controller Controller = controller(primary); // device names are usually capitil
 motor LF = motor(PORT1, ratio6_1, true); // brain port the device is plugged into, cartridge ratio (different 
                                          // motors have diff cartridges for speed or strength), true = reversed, false = normal
 motor LB = motor(PORT2, ratio6_1, true);
-
 motor RF = motor(PORT3, ratio6_1, false);
 motor RB = motor(PORT4, ratio6_1, false);
 
-motor left_arm = motor(PORT5, ratio36_1, )
+motor left_arm = motor(PORT5, ratio36_1, true);
+motor right_arm = motor(PORT6, ratio36_1, true);
+
+motor intake_arm = motor(PORT7, ratio6_1, true);
 // the false ones are reversed due to their orientation you'll see why next week when we build it :D

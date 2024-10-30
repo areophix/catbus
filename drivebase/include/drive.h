@@ -10,6 +10,5 @@ using namespace vex;
 double drive_curve(double x);
 void volt_drive(double lSpeed, double rSpeed, double wt);
 void drive_brake(vex::brakeType Brake);
-void twirl();
 
 #endif

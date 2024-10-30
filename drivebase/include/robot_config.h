@@ -13,3 +13,5 @@ extern motor RB;
 
 extern motor left_arm;
 extern motor right_arm;
+
+extern motor intake_arm;
