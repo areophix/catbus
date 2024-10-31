@@ -13,7 +13,12 @@ extern motor RB;
 
 extern motor left_arm;
 extern motor right_arm;
-
 extern motor intake_arm;
 
-// WHAT CLASS ARE THE PISTONS AND 5.5 WATT MOTORS AHHHH
+extern motor intake_wheels; // i hope theyre motors
+extern motor conveyor;
+
+extern pneumatics clamp;
+extern pneumatics left_claw;
+extern pneumatics right_claw;
+extern pneumatics intake_ramp;

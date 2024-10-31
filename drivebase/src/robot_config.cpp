@@ -6,7 +6,7 @@ using namespace vex;
 // so u can make a bunch of catagories but thats later.
 
 // A global instance of brain used for printing to the V5 Brain screen
-brain  Brain;
+brain Brain;
 
 controller Controller = controller(primary); // device names are usually capitilized cause lowercase ones are keywords
                                              // and the compiler will freak out cause it cant tell them apart
@@ -19,6 +19,12 @@ motor RB = motor(PORT4, ratio6_1, false);
 
 motor left_arm = motor(PORT5, ratio36_1, true);
 motor right_arm = motor(PORT6, ratio36_1, true);
-
 motor intake_arm = motor(PORT7, ratio6_1, true);
-// the false ones are reversed due to their orientation you'll see why next week when we build it :D
+
+motor intake_wheels = motor(PORT8, ratio6_1, true);
+motor conveyor = motor(PORT9, ratio6_1, true);
+
+pneumatics clamp = pneumatics(Brain.ThreeWirePort.A);
+pneumatics left_claw = pneumatics(Brain.ThreeWirePort.B);
+pneumatics right_claw = pneumatics(Brain.ThreeWirePort.C);
+pneumatics intake_ramp = pneumatics(Brain.ThreeWirePort.D);

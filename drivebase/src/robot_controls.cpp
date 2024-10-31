@@ -37,11 +37,12 @@ Arm_State arm_controls(Arm_State state) {
           return arm;
         }
         else if(Controller.ButtonR1.pressing()) {
-          // not sure if 5.5 watt motors are considered normal motor objects or if they have their own class
-          // gonna leave this alone until we find out
+          intake_wheels.spin(directionType::fwd, 50, velocityUnits::pct);
+          conveyor.spin(directionType::fwd, 50, velocityUnits::pct);
         }
         else if(Controller.ButtonR2.pressing()) {
-
+          intake_wheels.spin(directionType::fwd, -50, velocityUnits::pct);
+          conveyor.spin(directionType::fwd, -50, velocityUnits::pct);
         }
         else if(Controller.ButtonL1.pressing()) {
           intake_arm.spin(directionType::fwd, 50, velocityUnits::pct);
@@ -54,9 +55,11 @@ Arm_State arm_controls(Arm_State state) {
         }
         else if(Controller.ButtonY.pressing()) {
             // intake pistons + short eject with intake wheel motor
+            intake_wheels.spinFor(fwd, 100, msec); // might need to reverse & adjust time
         }
         else {
           intake_arm.stop(vex::brakeType::hold);
+          intake_wheels.stop(vex::brakeType::hold);
         }
     }
     else if(state == arm) {
@@ -76,7 +79,8 @@ Arm_State arm_controls(Arm_State state) {
             left_arm.spin(directionType::fwd, -50, velocityUnits::pct);
         }
         else if(Controller.ButtonRight.pressing()) {
-            // left claw piston
+            // left claw piston i dunno if .open will keep it open and then if its already open u have to run the close function?
+            // going to research it more :|
         }
         else if(Controller.ButtonY.pressing()) {
             // right claw piston
