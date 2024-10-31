@@ -15,3 +15,5 @@ extern motor left_arm;
 extern motor right_arm;
 
 extern motor intake_arm;
+
+// WHAT CLASS ARE THE PISTONS AND 5.5 WATT MOTORS AHHHH
