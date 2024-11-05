@@ -20,6 +20,7 @@
 #include "vex.h"
 #include "robot_config.h"
 #include "robot_controls.h"
+#include "autonomous.h"
 
 using namespace vex;
 
@@ -45,9 +46,7 @@ void pre_auton(void) {
 /*  You must modify the code to add your own robot specific commands here.   */
 /*---------------------------------------------------------------------------*/
 
-void autonomous(void) {
 
-}
 
 /*---------------------------------------------------------------------------*/
 /*                                                                           */
@@ -73,9 +72,10 @@ int main() {
 
   // Run the pre-autonomous function.
   pre_auton();
-
+  aivision myvision = aivision(PORT21);
   // Prevent main from exiting with an infinite loop.
   while (true) {
+    myvision.takeSnapshot(red);
     wait(100, msec);
   }
 }
