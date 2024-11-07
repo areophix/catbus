@@ -17,9 +17,9 @@ motor LB = motor(PORT2, ratio6_1, true);
 motor RF = motor(PORT3, ratio6_1, false);
 motor RB = motor(PORT4, ratio6_1, false);
 
-motor left_arm = motor(PORT5, ratio36_1, true);
+motor left_arm = motor(PORT5, ratio36_1, false);
 motor right_arm = motor(PORT6, ratio36_1, true);
-motor intake_arm = motor(PORT7, ratio6_1, true);
+motor intake_arm = motor(PORT7, ratio6_1, false);
 
 motor intake_wheels = motor(PORT8, ratio6_1, true);
 motor conveyor = motor(PORT9, ratio6_1, true);

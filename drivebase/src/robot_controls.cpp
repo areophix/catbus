@@ -4,7 +4,7 @@ using namespace vex;
 
 void usercontrol(void) {  
   brakeType driveBrake = coast; // ???
-  devices_check(); 
+  //devices_check(); 
   Arm_State arm_state = intake;
   while (1) // keeps checking the controller in a loop to get updates on whether or not its being moved
   { // the drive_brake, voltDrive, and driveCurve methods are in drive.cpp
@@ -13,7 +13,12 @@ void usercontrol(void) {
       drive_brake(driveBrake);
     }
     else {
-      volt_drive(drive_curve(Controller.Axis3.position()), drive_curve(Controller.Axis2.position()), 0); // is wait time supposed to be 0??
+      if(arm_state == intake) {
+        volt_drive(drive_curve(Controller.Axis3.position()), drive_curve(Controller.Axis2.position()), 0); // is wait time supposed to be 0??
+      }
+      else {
+        volt_drive(-drive_curve(Controller.Axis3.position()), -drive_curve(Controller.Axis2.position()), 0);
+      }
     }
     this_thread::sleep_for(15); // wait so it doesn't burn out from constantly running poor lil guy
 
@@ -34,6 +39,7 @@ void devices_check() {
 Arm_State arm_controls(Arm_State state) {
     if(state == intake) {
         if(Controller.ButtonX.pressing()) {
+          Brain.Screen.print("switched to arm");
           return arm;
         }
         else if(Controller.ButtonR1.pressing()) {
@@ -61,10 +67,12 @@ Arm_State arm_controls(Arm_State state) {
           intake_arm.stop(vex::brakeType::hold);
           intake_wheels.stop(vex::brakeType::hold);
         }
+        return intake;
     }
     else if(state == arm) {
         if(Controller.ButtonX.pressing()) {
-            return intake;
+          Brain.Screen.print("switched to intake");
+          return intake;
         }
         else if(Controller.ButtonR1.pressing()) {
             right_arm.spin(directionType::fwd, 50, velocityUnits::pct);//raises right arm??? I have no idea if any of this works.I copied this from a youtube tutorial made in 2020 :(
@@ -89,8 +97,10 @@ Arm_State arm_controls(Arm_State state) {
           right_arm.stop(vex::brakeType::hold);
           left_arm.stop(vex::brakeType::hold); // im assuming its okay to group them here :/
         }
+        return arm;
     }
     else {
         Brain.Screen.print("how dare you >:C");
+        return intake;
     }
 }

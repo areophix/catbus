@@ -75,7 +75,7 @@ int main() {
   aivision myvision = aivision(PORT21);
   // Prevent main from exiting with an infinite loop.
   while (true) {
-    myvision.takeSnapshot(red);
+    //myvision.takeSnapshot(red);
     wait(100, msec);
   }
 }
