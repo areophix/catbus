@@ -19,6 +19,4 @@ extern motor intake_wheels; // i hope theyre motors
 extern motor conveyor;
 
 extern pneumatics clamp;
-extern pneumatics left_claw;
-extern pneumatics right_claw;
-extern pneumatics intake_ramp;
+extern pneumatics arm_pistons;

@@ -1,4 +1,5 @@
 #include "robot_controls.h"
+#include <vector>
 #include <iostream>
 
 using namespace vex;
@@ -8,7 +9,7 @@ void usercontrol(void) {
   brakeType driveBrake = coast; // ???
   //devices_check(); 
   Arm_State arm_state = intake;
-  int clamp_state = 0; //closed  
+  vector<int> clamp_state = {0, 0}; //closed  
   while (1) // keeps checking the controller in a loop to get updates on whether or not its being moved
   { // the drive_brake, voltDrive, and driveCurve methods are in drive.cpp
     arm_state = arm_controls(arm_state);
@@ -24,7 +25,7 @@ void usercontrol(void) {
         volt_drive(-drive_curve(Controller.Axis3.position()), -drive_curve(Controller.Axis2.position()), 0);
       }
     }
-    this_thread::sleep_for(15); // wait so it doesn't burn out from constantly running poor lil guy
+    this_thread::sleep_for(20); 
   }
 }
 
@@ -39,20 +40,34 @@ void devices_check() {
   }
 }
 
-int clamp_controls(int state) {
+std::vector<int> clamp_controls(std::vector<int> state) {
   if(Controller.ButtonRight.pressing()) {
-    if (state) { 
+    if (state[0]) { 
       clamp.close();
-      return 0;
+      state.insert(state.begin(), 0);
+      state.erase(state.begin()+1);
     }
     else {
       clamp.open();
-      return 1;
+      state.insert(state.begin(), 1);
+      state.erase(state.begin()+1);
     }
-  } else {
-    //hey stupid, no button control must maintain state
-    return state;
   }
+  else if(Controller.ButtonY.pressing()) {
+    if(state[1]) {
+      arm_pistons.close();
+      state.insert(state.begin()+1, 0);
+      state.erase(state.begin()+2);
+    }
+    else {
+      arm_pistons.open();
+      state.insert(state.begin()+1, 1);
+      state.erase(state.begin()+2);
+    }
+  } 
+    //hey stupid, no button control must maintain state
+  cout << state[0] << "  " << state[1] << endl;
+  return state;
 }
 
 Arm_State arm_controls(Arm_State state) {
@@ -94,7 +109,13 @@ Arm_State arm_controls(Arm_State state) {
         else if(Controller.ButtonR2.pressing()) {
             right_arm.spin(directionType::fwd, -50, velocityUnits::pct);
             left_arm.spin(directionType::fwd, -50, velocityUnits::pct);//lowers right arm...maybe?
-        }                                                               // im pretty sure its right
+        }
+        else if(Controller.ButtonL1.pressing()) {
+          intake_arm.spin(directionType::fwd, 25, velocityUnits::pct);
+        }
+        else if(Controller.ButtonL2.pressing()) {
+          intake_arm.spin(directionType::fwd, -25, velocityUnits::pct);
+        }
         else if(Controller.ButtonY.pressing()) {
             // arm adjustment piston(s)
         }
