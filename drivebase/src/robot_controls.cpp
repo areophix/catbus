@@ -6,6 +6,7 @@ using namespace vex;
 using namespace std;
 
 vector<int> clamp_state = {0, 0};
+int adj_spd;
 
 void usercontrol(void) {  
   brakeType driveBrake = coast; // ???
@@ -73,6 +74,11 @@ std::vector<int> clamp_controls(std::vector<int> state) {
 }
 
 Arm_State arm_controls(Arm_State state) {
+    if(clamp_state[1]) {
+      adj_spd = 50;
+    } else {
+      adj_spd = 100;
+    }
     if(state == intake) {
         if(Controller.ButtonX.pressing()) {
           Brain.Screen.print("switched to climb");
@@ -80,11 +86,11 @@ Arm_State arm_controls(Arm_State state) {
         }
         else if(Controller.ButtonR1.pressing()) {
           intake_wheels.spin(directionType::fwd, 75, velocityUnits::pct);
-          conveyor.spin(directionType::fwd, 100, velocityUnits::pct);
+          conveyor.spin(directionType::fwd, adj_spd, velocityUnits::pct);
         }
         else if(Controller.ButtonR2.pressing()) {
           intake_wheels.spin(directionType::fwd, -75, velocityUnits::pct);
-          conveyor.spin(directionType::fwd, -100, velocityUnits::pct);
+          conveyor.spin(directionType::fwd, -adj_spd, velocityUnits::pct);
         }
         else if(Controller.ButtonL1.pressing()) {
           intake_arm.spin(directionType::fwd, 25, velocityUnits::pct);
