@@ -5,11 +5,13 @@
 using namespace vex;
 using namespace std;
 
+vector<int> clamp_state = {0, 0};
+
 void usercontrol(void) {  
   brakeType driveBrake = coast; // ???
   //devices_check(); 
   Arm_State arm_state = intake;
-  vector<int> clamp_state = {0, 0}; //closed  
+ //closed  
   while (1) // keeps checking the controller in a loop to get updates on whether or not its being moved
   { // the drive_brake, voltDrive, and driveCurve methods are in drive.cpp
     arm_state = arm_controls(arm_state);
@@ -66,7 +68,7 @@ std::vector<int> clamp_controls(std::vector<int> state) {
     }
   } 
     //hey stupid, no button control must maintain state
-  cout << state[0] << "  " << state[1] << endl;
+  this_thread::sleep_for(100);
   return state;
 }
 
@@ -121,7 +123,8 @@ Arm_State arm_controls(Arm_State state) {
         }
         else {                    
           right_arm.stop(vex::brakeType::hold);
-          left_arm.stop(vex::brakeType::hold); // im assuming its okay to group them here :/
+          left_arm.stop(vex::brakeType::hold);
+          intake_arm.stop(vex::brakeType::hold);
         }
         return arm;
     }
