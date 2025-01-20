@@ -5,24 +5,31 @@
 using namespace vex;
 using namespace std;
 
-vector<int> clamp_state = {0, 0};
-int adj_spd;
+struct Cyl_states {
+  int clamp;
+  int arm;
+  int adj_spd;
+};
 
 void usercontrol(void) {  
   brakeType driveBrake = coast; // ???
   //devices_check(); 
   Arm_State arm_state = intake;
+  Cyl_states cyl_state;
+  cyl_state.clamp = 0;
+  cyl_state.arm = 0;
+  cyl_state.adj_spd = 100;
  //closed  
   while (1) // keeps checking the controller in a loop to get updates on whether or not its being moved
   { // the drive_brake, voltDrive, and driveCurve methods are in drive.cpp
-    arm_state = arm_controls(arm_state);
-    clamp_state = clamp_controls(clamp_state);
+    arm_state = arm_controls(arm_state, cyl_state);
+    cyl_state = clamp_controls(cyl_state);
     if ((abs(Controller.Axis3.position(pct)) < 2) && (abs(Controller.Axis2.position(pct)) < 2)) {
       drive_brake(driveBrake);
     }
     else {
       if(arm_state == intake) {
-        volt_drive(drive_curve(Controller.Axis3.position()), drive_curve(Controller.Axis2.position()), 0); // is wait time supposed to be 0??
+        volt_drive(drive_curve(Controller.Axis3.position()), drive_curve(Controller.Axis2.position()), 0);
       }
       else {
         volt_drive(-drive_curve(Controller.Axis3.position()), -drive_curve(Controller.Axis2.position()), 0);
@@ -43,42 +50,37 @@ void devices_check() {
   }
 }
 
-std::vector<int> clamp_controls(std::vector<int> state) {
+Cyl_states clamp_controls(Cyl_states state) {
   if(Controller.ButtonRight.pressing()) {
-    if (state[0]) { 
+    if (state.clamp) { 
       clamp.close();
-      state.insert(state.begin(), 0);
-      state.erase(state.begin()+1);
+      state.clamp = 0;
     }
     else {
       clamp.open();
-      state.insert(state.begin(), 1);
-      state.erase(state.begin()+1);
+      state.clamp = 1;
     }
   }
   else if(Controller.ButtonY.pressing()) {
-    if(state[1]) {
+    if (state.arm) {
       arm_pistons.close();
-      state.insert(state.begin()+1, 0);
-      state.erase(state.begin()+2);
+      state.arm = 0;
+      state.adj_spd = 100;
+      volt_drive(100, 100, 800);
+      drive_brake(coast);
     }
     else {
       arm_pistons.open();
-      state.insert(state.begin()+1, 1);
-      state.erase(state.begin()+2);
+      state.arm = 1;
+      state.adj_spd = 50;
     }
   } 
     //hey stupid, no button control must maintain state
-  this_thread::sleep_for(100);
+  this_thread::sleep_for(200);
   return state;
 }
 
-Arm_State arm_controls(Arm_State state) {
-    if(clamp_state[1]) {
-      adj_spd = 50;
-    } else {
-      adj_spd = 100;
-    }
+Arm_State arm_controls(Arm_State state, Cyl_states cyl) {
     if(state == intake) {
         if(Controller.ButtonX.pressing()) {
           Brain.Screen.print("switched to climb");
@@ -86,11 +88,11 @@ Arm_State arm_controls(Arm_State state) {
         }
         else if(Controller.ButtonR1.pressing()) {
           intake_wheels.spin(directionType::fwd, 75, velocityUnits::pct);
-          conveyor.spin(directionType::fwd, adj_spd, velocityUnits::pct);
+          conveyor.spin(directionType::fwd, cyl.adj_spd, velocityUnits::pct);
         }
         else if(Controller.ButtonR2.pressing()) {
           intake_wheels.spin(directionType::fwd, -75, velocityUnits::pct);
-          conveyor.spin(directionType::fwd, -adj_spd, velocityUnits::pct);
+          conveyor.spin(directionType::fwd, -cyl.adj_spd, velocityUnits::pct);
         }
         else if(Controller.ButtonL1.pressing()) {
           intake_arm.spin(directionType::fwd, 25, velocityUnits::pct);
