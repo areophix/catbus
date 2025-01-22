@@ -66,8 +66,8 @@ Cyl_states clamp_controls(Cyl_states state) {
       arm_pistons.close();
       state.arm = 0;
       state.adj_spd = 100;
-      volt_drive(100, 100, 800);
-      drive_brake(coast);
+      this_thread::sleep_for(170);
+      intake_arm.spinFor(250, msec, 25, velocityUnits::pct);
     }
     else {
       arm_pistons.open();
@@ -76,7 +76,7 @@ Cyl_states clamp_controls(Cyl_states state) {
     }
   } 
     //hey stupid, no button control must maintain state
-  this_thread::sleep_for(200);
+  this_thread::sleep_for(100);
   return state;
 }
 
