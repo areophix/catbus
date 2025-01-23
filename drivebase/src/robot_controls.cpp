@@ -18,7 +18,7 @@ void usercontrol(void) {
   Cyl_states cyl_state;
   cyl_state.clamp = 0;
   cyl_state.arm = 0;
-  cyl_state.adj_spd = 100;
+  cyl_state.adj_spd = 125;
  //closed  
   while (1) // keeps checking the controller in a loop to get updates on whether or not its being moved
   { // the drive_brake, voltDrive, and driveCurve methods are in drive.cpp
@@ -65,9 +65,11 @@ Cyl_states clamp_controls(Cyl_states state) {
     if (state.arm) {
       arm_pistons.close();
       state.arm = 0;
-      state.adj_spd = 100;
-      this_thread::sleep_for(170);
-      intake_arm.spinFor(250, msec, 25, velocityUnits::pct);
+      state.adj_spd = 125;
+      this_thread::sleep_for(150);
+      //intake_arm.spin(fwd, -25, velocityUnits::pct);
+      volt_drive(-50, -50, 250);
+      drive_brake(coast);
     }
     else {
       arm_pistons.open();
