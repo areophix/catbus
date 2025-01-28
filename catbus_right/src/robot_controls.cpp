@@ -12,7 +12,7 @@ struct Cyl_states {
 };
 
 void usercontrol(void) {  
-  brakeType driveBrake = coast; // ???
+  brakeType driveBrake = brake;
   //devices_check(); 
   Arm_State arm_state = intake;
   Cyl_states cyl_state;
@@ -29,10 +29,10 @@ void usercontrol(void) {
     }
     else {
       if(arm_state == intake) {
-        volt_drive(drive_curve(Controller.Axis3.position()), drive_curve(Controller.Axis2.position()), 0);
+        drive(drive_curve(Controller.Axis3.position()), drive_curve(Controller.Axis2.position()), 0);
       }
       else {
-        volt_drive(-drive_curve(Controller.Axis3.position()), -drive_curve(Controller.Axis2.position()), 0);
+        drive(-drive_curve(Controller.Axis3.position()), -drive_curve(Controller.Axis2.position()), 0);
       }
     }
     this_thread::sleep_for(20); 
@@ -62,14 +62,13 @@ Cyl_states clamp_controls(Cyl_states state) {
     }
   }
   else if(Controller.ButtonY.pressing()) {
-    if (state.arm) {
+    if (state.arm) { // if arm cyl is open
       arm_pistons.close();
       state.arm = 0;
       state.adj_spd = 125;
       this_thread::sleep_for(150);
-      //intake_arm.spin(fwd, -25, velocityUnits::pct);
-      volt_drive(-50, -50, 250);
-      drive_brake(coast);
+      drive(-50, -50, 250); // drive back 1/2 spd for 250ms
+      drive_brake(brake);
     }
     else {
       arm_pistons.open();

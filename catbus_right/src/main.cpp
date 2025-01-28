@@ -65,7 +65,6 @@ void pre_auton(void) {
 //
 int main() {
   // Set up callbacks for autonomous and driver control periods.  
-  Brain.Screen.print("hi!"); 
 
   Competition.autonomous(autonomous);
   Competition.drivercontrol(usercontrol);
