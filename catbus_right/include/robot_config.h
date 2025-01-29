@@ -20,3 +20,5 @@ extern motor conveyor;
 
 extern pneumatics clamp;
 extern pneumatics arm_pistons;
+
+extern vision cam;

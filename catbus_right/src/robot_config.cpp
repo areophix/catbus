@@ -27,3 +27,5 @@ motor conveyor = motor(PORT11, ratio6_1, false);
 
 pneumatics clamp = pneumatics(Brain.ThreeWirePort.A);
 pneumatics arm_pistons = pneumatics(Brain.ThreeWirePort.B);
+
+vision cam = vision(PORT20);
