@@ -2889,7 +2889,7 @@ Linker script and memory map
                 0x00000400                _FIQ_STACK_SIZE = DEFINED (_FIQ_STACK_SIZE)?_FIQ_STACK_SIZE:0x400
                 0x00000400                _UNDEF_STACK_SIZE = DEFINED (_UNDEF_STACK_SIZE)?_UNDEF_STACK_SIZE:0x400
 
-.text           0x03800000     0x36b8
+.text           0x03800000     0x3670
  *(.vectors)
  *(.boot_data)
  .boot_data     0x03800000       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
@@ -2908,611 +2908,614 @@ Linker script and memory map
  .text._GLOBAL__sub_I_main.cpp
                 0x03800160       0x34 build/src/main.o
  *fill*         0x03800194        0x4 
+ .text._Z6cameraf
+                0x03800198      0x158 build/src/autonomous.o
+                0x03800198                camera(float)
  .text._Z10autonomousv
-                0x03800198      0x340 build/src/autonomous.o
-                0x03800198                autonomous()
+                0x038002f0      0x1a0 build/src/autonomous.o
+                0x038002f0                autonomous()
  .text._Z11drive_curved
-                0x038004d8       0x30 build/src/drive.o
-                0x038004d8                drive_curve(double)
+                0x03800490       0x30 build/src/drive.o
+                0x03800490                drive_curve(double)
  .text._Z5driveddd
-                0x03800508       0xe0 build/src/drive.o
-                0x03800508                drive(double, double, double)
+                0x038004c0       0xe0 build/src/drive.o
+                0x038004c0                drive(double, double, double)
  .text._Z11drive_brakeN3vex9brakeTypeE
-                0x038005e8       0x50 build/src/drive.o
-                0x038005e8                drive_brake(vex::brakeType)
+                0x038005a0       0x50 build/src/drive.o
+                0x038005a0                drive_brake(vex::brakeType)
  .text._GLOBAL__sub_I_robot_config.cpp
-                0x03800638      0x2e0 build/src/robot_config.o
+                0x038005f0      0x2e0 build/src/robot_config.o
  .text._Z13devices_checkv
-                0x03800918       0x90 build/src/robot_controls.o
-                0x03800918                devices_check()
+                0x038008d0       0x90 build/src/robot_controls.o
+                0x038008d0                devices_check()
  .text._Z11usercontrolv
-                0x038009a8      0x184 build/src/robot_controls.o
-                0x038009a8                usercontrol()
- *fill*         0x03800b2c        0x4 
+                0x03800960      0x184 build/src/robot_controls.o
+                0x03800960                usercontrol()
+ *fill*         0x03800ae4        0x4 
  .text._Z12arm_controls9Arm_State10Cyl_states
-                0x03800b30      0x2d0 build/src/robot_controls.o
-                0x03800b30                arm_controls(Arm_State, Cyl_states)
+                0x03800ae8      0x2d0 build/src/robot_controls.o
+                0x03800ae8                arm_controls(Arm_State, Cyl_states)
  .text._Z14clamp_controls10Cyl_states
-                0x03800e00       0xf0 build/src/robot_controls.o
-                0x03800e00                clamp_controls(Cyl_states)
- .text.vexMain  0x03800ef0       0xb0 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03800ef0                vexMain
+                0x03800db8       0xf0 build/src/robot_controls.o
+                0x03800db8                clamp_controls(Cyl_states)
+ .text.vexMain  0x03800ea8       0xb0 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03800ea8                vexMain
  .text.__vex_function_prolog
-                0x03800fa0       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03800fa0                __vex_function_prolog
- .text._init    0x03800fb8        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03800fb8                _init
- .text._fini    0x03800fbc        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03800fbc                _fini
+                0x03800f58       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03800f58                __vex_function_prolog
+ .text._init    0x03800f70        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03800f70                _init
+ .text._fini    0x03800f74        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03800f74                _fini
  .text.vexStdlibVersionLinked
-                0x03800fc0        0xc c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_util.c.obj)
-                0x03800fc0                vexStdlibVersionLinked
+                0x03800f78        0xc c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_util.c.obj)
+                0x03800f78                vexStdlibVersionLinked
  .text.vexStdlibVersionVerify
-                0x03800fcc       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_util.c.obj)
-                0x03800fcc                vexStdlibVersionVerify
+                0x03800f84       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_util.c.obj)
+                0x03800f84                vexStdlibVersionVerify
  .text.vexPrivateApiEnable
-                0x03800ffc       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800ffc                vexPrivateApiEnable
+                0x03800fb4       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800fb4                vexPrivateApiEnable
  .text.vexStdlibMismatchError
-                0x0380100c       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380100c                vexStdlibMismatchError
+                0x03800fc4       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800fc4                vexStdlibMismatchError
  .text.vexTaskAdd
-                0x03801048       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801048                vexTaskAdd
+                0x03801000       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801000                vexTaskAdd
  .text.vexTasksRun
-                0x03801058       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801058                vexTasksRun
+                0x03801010       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801010                vexTasksRun
  .text.vexTaskYield
-                0x03801068       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801068                vexTaskYield
+                0x03801020       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801020                vexTaskYield
  .text.vexTaskCheckTimeslice
-                0x03801078       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801078                vexTaskCheckTimeslice
+                0x03801030       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801030                vexTaskCheckTimeslice
  .text.vexTaskSleep
-                0x03801088       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801088                vexTaskSleep
+                0x03801040       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801040                vexTaskSleep
  .text.vexTasksDump
-                0x03801098       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801098                vexTasksDump
+                0x03801050       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801050                vexTasksDump
  .text.vexTaskGetTaskIndex
-                0x038010b4       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038010b4                vexTaskGetTaskIndex
+                0x0380106c       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380106c                vexTaskGetTaskIndex
  .text.vexTaskStopAll
-                0x038010c4       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038010c4                vexTaskStopAll
+                0x0380107c       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380107c                vexTaskStopAll
  .text.vexTaskRemoveAllUser
-                0x038010d4       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038010d4                vexTaskRemoveAllUser
+                0x0380108c       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380108c                vexTaskRemoveAllUser
  .text.vexTaskCompletionIdSet
-                0x03801108       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801108                vexTaskCompletionIdSet
+                0x038010c0       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038010c0                vexTaskCompletionIdSet
  .text.vexTaskStopWithId
-                0x03801118       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801118                vexTaskStopWithId
+                0x038010d0       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038010d0                vexTaskStopWithId
  .text.vexEventAdd
-                0x03801128       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801128                vexEventAdd
+                0x038010e0       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038010e0                vexEventAdd
  .text.vexEventUserIndexGet
-                0x0380115c       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380115c                vexEventUserIndexGet
+                0x03801114       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801114                vexEventUserIndexGet
  .text.vexEventAddWithArg
-                0x03801178       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801178                vexEventAddWithArg
+                0x03801130       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801130                vexEventAddWithArg
  .text.vexEventsCleanup
-                0x038011b4       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038011b4                vexEventsCleanup
+                0x0380116c       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380116c                vexEventsCleanup
  .text.vexDebug
-                0x038011e0       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038011e0                vexDebug
+                0x03801198       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801198                vexDebug
  .text.vex_sprintf
-                0x03801218       0x40 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801218                vex_sprintf
+                0x038011d0       0x40 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038011d0                vex_sprintf
  .text.vex_vsnprintf
-                0x03801258       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801258                vex_vsnprintf
+                0x03801210       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801210                vex_vsnprintf
  .text.vexSystemTimeGet
-                0x03801294       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801294                vexSystemTimeGet
+                0x0380124c       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380124c                vexSystemTimeGet
  .text.vexSystemExitRequest
-                0x038012b0       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038012b0                vexSystemExitRequest
+                0x03801268       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801268                vexSystemExitRequest
  .text.vexDeviceGetByIndex
-                0x038012cc       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038012cc                vexDeviceGetByIndex
+                0x03801284       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801284                vexDeviceGetByIndex
  .text.vexControllerGet
-                0x038012f0       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038012f0                vexControllerGet
+                0x038012a8       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038012a8                vexControllerGet
  .text.vexControllerTextSet
-                0x0380131c       0x74 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380131c                vexControllerTextSet
+                0x038012d4       0x74 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038012d4                vexControllerTextSet
  .text.vexDeviceAdiPortConfigSet
-                0x03801390       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801390                vexDeviceAdiPortConfigSet
+                0x03801348       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801348                vexDeviceAdiPortConfigSet
  .text.vexDeviceAdiPortConfigGet
-                0x038013c4       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038013c4                vexDeviceAdiPortConfigGet
+                0x0380137c       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380137c                vexDeviceAdiPortConfigGet
  .text.vexDeviceAdiValueSet
-                0x038013f0       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038013f0                vexDeviceAdiValueSet
+                0x038013a8       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038013a8                vexDeviceAdiValueSet
  .text.vexDeviceMotorVelocitySet
-                0x03801424       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801424                vexDeviceMotorVelocitySet
+                0x038013dc       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038013dc                vexDeviceMotorVelocitySet
  .text.vexDeviceMotorVoltageSet
-                0x03801450       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801450                vexDeviceMotorVoltageSet
+                0x03801408       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801408                vexDeviceMotorVoltageSet
  .text.vexDeviceMotorActualVelocityGet
-                0x0380147c       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380147c                vexDeviceMotorActualVelocityGet
+                0x03801434       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801434                vexDeviceMotorActualVelocityGet
  .text.vexDeviceMotorReverseFlagSet
-                0x038014a0       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038014a0                vexDeviceMotorReverseFlagSet
+                0x03801458       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801458                vexDeviceMotorReverseFlagSet
  .text.vexDeviceMotorBrakeModeSet
-                0x038014cc       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038014cc                vexDeviceMotorBrakeModeSet
+                0x03801484       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801484                vexDeviceMotorBrakeModeSet
  .text.vexDeviceMotorPositionSet
-                0x038014f8       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038014f8                vexDeviceMotorPositionSet
+                0x038014b0       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038014b0                vexDeviceMotorPositionSet
  .text.vexDeviceMotorGearingSet
-                0x0380152c       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380152c                vexDeviceMotorGearingSet
+                0x038014e4       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038014e4                vexDeviceMotorGearingSet
  .text.vexDeviceMotorGearingGet
-                0x03801558       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801558                vexDeviceMotorGearingGet
+                0x03801510       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801510                vexDeviceMotorGearingGet
  .text.vexDeviceVisionModeSet
-                0x0380157c       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380157c                vexDeviceVisionModeSet
+                0x03801534       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801534                vexDeviceVisionModeSet
  .text.vexDeviceVisionObjectCountGet
-                0x038015a8       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038015a8                vexDeviceVisionObjectCountGet
+                0x03801560       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801560                vexDeviceVisionObjectCountGet
  .text.vexDeviceVisionObjectGet
-                0x038015cc       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038015cc                vexDeviceVisionObjectGet
+                0x03801584       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801584                vexDeviceVisionObjectGet
  .text.vexDeviceVisionLedModeSet
-                0x03801600       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801600                vexDeviceVisionLedModeSet
+                0x038015b8       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038015b8                vexDeviceVisionLedModeSet
  .text.vexDeviceVisionLedColorSet
-                0x0380162c       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380162c                vexDeviceVisionLedColorSet
+                0x038015e4       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038015e4                vexDeviceVisionLedColorSet
  .text.vexDisplayForegroundColor
-                0x0380165c       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380165c                vexDisplayForegroundColor
+                0x03801614       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801614                vexDisplayForegroundColor
  .text.vexDisplayBackgroundColor
-                0x03801680       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801680                vexDisplayBackgroundColor
+                0x03801638       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801638                vexDisplayBackgroundColor
  .text.vexDisplayVPrintf
-                0x038016a4       0x50 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038016a4                vexDisplayVPrintf
+                0x0380165c       0x50 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380165c                vexDisplayVPrintf
  .text.vexDisplayTextReference
-                0x038016f4       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038016f4                vexDisplayTextReference
+                0x038016ac       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038016ac                vexDisplayTextReference
  .text.vexDisplayTextSize
-                0x03801718       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801718                vexDisplayTextSize
+                0x038016d0       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038016d0                vexDisplayTextSize
  .text.vexDisplayFontNamedSet
-                0x03801744       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801744                vexDisplayFontNamedSet
+                0x038016fc       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038016fc                vexDisplayFontNamedSet
  .text.vexDisplayStringWidthGet
-                0x03801768       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801768                vexDisplayStringWidthGet
+                0x03801720       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801720                vexDisplayStringWidthGet
  .text.vexSystemStdlibImpureDataAddr
-                0x0380178c       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380178c                vexSystemStdlibImpureDataAddr
+                0x03801744       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801744                vexSystemStdlibImpureDataAddr
  .text.vexSystemStdlibImpureDataSize
-                0x038017b4       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038017b4                vexSystemStdlibImpureDataSize
+                0x0380176c       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380176c                vexSystemStdlibImpureDataSize
  .text.vexSystemSaveUserData
-                0x038017dc       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038017dc                vexSystemSaveUserData
+                0x03801794       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801794                vexSystemSaveUserData
  .text.vexDisplayThemeIdGet
-                0x03801818       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801818                vexDisplayThemeIdGet
+                0x038017d0       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038017d0                vexDisplayThemeIdGet
  .text.vexDeviceEventMaskSet
-                0x03801850       0x48 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801850                vexDeviceEventMaskSet
+                0x03801808       0x48 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801808                vexDeviceEventMaskSet
  .text.vexDeviceEventMaskGet
-                0x03801898       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03801898                vexDeviceEventMaskGet
+                0x03801850       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03801850                vexDeviceEventMaskGet
  .text.vexSystemVersion
-                0x038018d4       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiversions.c.obj)
-                0x038018d4                vexSystemVersion
+                0x0380188c       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiversions.c.obj)
+                0x0380188c                vexSystemVersion
  .text.vexStdlibVersion
-                0x038018e4       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiversions.c.obj)
-                0x038018e4                vexStdlibVersion
- *fill*         0x038018f4        0x4 
+                0x0380189c       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiversions.c.obj)
+                0x0380189c                vexStdlibVersion
+ *fill*         0x038018ac        0x4 
  .text._ZN3vex4waitEdNS_9timeUnitsE
-                0x038018f8       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038018f8                vex::wait(double, vex::timeUnits)
+                0x038018b0       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038018b0                vex::wait(double, vex::timeUnits)
  .text._ZN3vex5motorD2Ev
-                0x03801928       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03801928                vex::motor::~motor()
-                0x03801928                vex::motor::~motor()
+                0x038018e0       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x038018e0                vex::motor::~motor()
+                0x038018e0                vex::motor::~motor()
  .text._ZN3vex5motorD0Ev
-                0x03801948       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03801948                vex::motor::~motor()
+                0x03801900       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03801900                vex::motor::~motor()
  .text._ZN3vex5motor9installedEv
-                0x03801964       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03801964                vex::motor::installed()
+                0x0380191c       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x0380191c                vex::motor::installed()
  .text._ZN3vex5motor15defaultStoppingENS_9brakeTypeE
-                0x0380197c       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x0380197c                vex::motor::defaultStopping(vex::brakeType)
+                0x03801934       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03801934                vex::motor::defaultStopping(vex::brakeType)
  .text._ZN3vex5motorC2El
-                0x038019ac       0x78 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x038019ac                vex::motor::motor(long)
-                0x038019ac                vex::motor::motor(long)
+                0x03801964       0x78 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03801964                vex::motor::motor(long)
+                0x03801964                vex::motor::motor(long)
  .text._ZN3vex5motorC2ElNS_11gearSettingEb
-                0x03801a24       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03801a24                vex::motor::motor(long, vex::gearSetting, bool)
-                0x03801a24                vex::motor::motor(long, vex::gearSetting, bool)
+                0x038019dc       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x038019dc                vex::motor::motor(long, vex::gearSetting, bool)
+                0x038019dc                vex::motor::motor(long, vex::gearSetting, bool)
  .text._ZN3vex5motor4spinENS_13directionTypeEdNS_12voltageUnitsE
-                0x03801a58       0x50 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03801a58                vex::motor::spin(vex::directionType, double, vex::voltageUnits)
+                0x03801a10       0x50 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03801a10                vex::motor::spin(vex::directionType, double, vex::voltageUnits)
  .text._ZN3vex5motor4stopENS_9brakeTypeE
-                0x03801aa8       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03801aa8                vex::motor::stop(vex::brakeType)
+                0x03801a60       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03801a60                vex::motor::stop(vex::brakeType)
  .text._ZN3vex5motor4stopEv
-                0x03801ad8        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03801ad8                vex::motor::stop()
+                0x03801a90        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03801a90                vex::motor::stop()
  .text._ZN3vex5motor16velocityToScaledEdNS_13velocityUnitsE
-                0x03801ae0       0x5c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03801ae0                vex::motor::velocityToScaled(double, vex::velocityUnits)
+                0x03801a98       0x5c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03801a98                vex::motor::velocityToScaled(double, vex::velocityUnits)
  .text._ZN3vex5motor8velocityENS_13velocityUnitsE
-                0x03801b3c       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03801b3c                vex::motor::velocity(vex::velocityUnits)
+                0x03801af4       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03801af4                vex::motor::velocity(vex::velocityUnits)
  .text._ZN3vex5motor5valueEv
-                0x03801b6c       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03801b6c                vex::motor::value()
+                0x03801b24       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03801b24                vex::motor::value()
  .text._ZN3vex5motor16scaledToVelocityEdNS_13velocityUnitsE
-                0x03801b88       0xa4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03801b88                vex::motor::scaledToVelocity(double, vex::velocityUnits)
+                0x03801b40       0xa4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03801b40                vex::motor::scaledToVelocity(double, vex::velocityUnits)
  .text._ZN3vex5motor4spinENS_13directionTypeEdNS_13velocityUnitsE
-                0x03801c2c       0x5c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03801c2c                vex::motor::spin(vex::directionType, double, vex::velocityUnits)
+                0x03801be4       0x5c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03801be4                vex::motor::spin(vex::directionType, double, vex::velocityUnits)
  .text._ZN3vex6vision9installedEv
-                0x03801c88       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03801c88                vex::vision::installed()
+                0x03801c40       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801c40                vex::vision::installed()
  .text._ZN3vex6visionD2Ev
-                0x03801ca0       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03801ca0                vex::vision::~vision()
-                0x03801ca0                vex::vision::~vision()
+                0x03801c58       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801c58                vex::vision::~vision()
+                0x03801c58                vex::vision::~vision()
  .text._ZN3vex6visionD0Ev
-                0x03801cd8       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03801cd8                vex::vision::~vision()
+                0x03801c90       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801c90                vex::vision::~vision()
  .text._ZN3vex6vision7setModeENS0_13detectionModeE
-                0x03801cf4       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03801cf4                vex::vision::setMode(vex::vision::detectionMode)
+                0x03801cac       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801cac                vex::vision::setMode(vex::vision::detectionMode)
  .text._ZN3vex6vision10setLedModeENS0_7ledModeE
-                0x03801d0c       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03801d0c                vex::vision::setLedMode(vex::vision::ledMode)
+                0x03801cc4       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801cc4                vex::vision::setLedMode(vex::vision::ledMode)
  .text._ZN3vex6vision11setLedColorEhhh
-                0x03801d24       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03801d24                vex::vision::setLedColor(unsigned char, unsigned char, unsigned char)
- *fill*         0x03801d54        0x4 
+                0x03801cdc       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801cdc                vex::vision::setLedColor(unsigned char, unsigned char, unsigned char)
+ *fill*         0x03801d0c        0x4 
  .text._ZN3vex6vision6object3setE22_V5_DeviceVisionObject
-                0x03801d58       0x78 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03801d58                vex::vision::object::set(_V5_DeviceVisionObject)
+                0x03801d10       0x78 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801d10                vex::vision::object::set(_V5_DeviceVisionObject)
  .text._ZN3vex6vision6object5clearEv
-                0x03801dd0       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03801dd0                vex::vision::object::clear()
+                0x03801d88       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801d88                vex::vision::object::clear()
  .text._ZN3vex6vision6objectC2Ev
-                0x03801e08       0x58 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03801e08                vex::vision::object::object()
-                0x03801e08                vex::vision::object::object()
+                0x03801dc0       0x58 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801dc0                vex::vision::object::object()
+                0x03801dc0                vex::vision::object::object()
  .text._ZN3vex6vision13_clearObjectsEv
-                0x03801e60       0x40 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03801e60                vex::vision::_clearObjects()
+                0x03801e18       0x40 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801e18                vex::vision::_clearObjects()
  .text._ZN3vex6vision6objectaSERKS1_
-                0x03801ea0       0x74 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03801ea0                vex::vision::object::operator=(vex::vision::object const&)
+                0x03801e58       0x74 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801e58                vex::vision::object::operator=(vex::vision::object const&)
  .text._ZN3vex6vision12takeSnapshotEmm
-                0x03801f14       0xf4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03801f14                vex::vision::takeSnapshot(unsigned long, unsigned long)
+                0x03801ecc       0xf4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801ecc                vex::vision::takeSnapshot(unsigned long, unsigned long)
  .text._ZN3vex6vision12takeSnapshotEm
-                0x03802008        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03802008                vex::vision::takeSnapshot(unsigned long)
+                0x03801fc0        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801fc0                vex::vision::takeSnapshot(unsigned long)
  .text._ZN3vex6vision5valueEv
-                0x03802010        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03802010                vex::vision::value()
+                0x03801fc8        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801fc8                vex::vision::value()
  .text._ZN3vex6vision6objectaSEl
-                0x03802018       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03802018                vex::vision::object::operator=(long)
+                0x03801fd0       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03801fd0                vex::vision::object::operator=(long)
  .text._ZN3vex6visionC2El
-                0x03802050       0xa4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x03802050                vex::vision::vision(long)
-                0x03802050                vex::vision::vision(long)
+                0x03802008       0xa4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03802008                vex::vision::vision(long)
+                0x03802008                vex::vision::vision(long)
  .text._ZN3vex10controllerD2Ev
-                0x038020f4        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x038020f4                vex::controller::~controller()
-                0x038020f4                vex::controller::~controller()
+                0x038020ac        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038020ac                vex::controller::~controller()
+                0x038020ac                vex::controller::~controller()
  .text._ZN3vex10controller5valueE19_V5_ControllerIndex
-                0x038020f8        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x038020f8                vex::controller::value(_V5_ControllerIndex)
+                0x038020b0        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038020b0                vex::controller::value(_V5_ControllerIndex)
  .text._ZNK3vex10controller6button8pressingEv
-                0x03802100       0xc8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03802100                vex::controller::button::pressing() const
+                0x038020b8       0xc8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038020b8                vex::controller::button::pressing() const
  .text._ZNK3vex10controller6button21_buttonToPressedEventEv
-                0x038021c8       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x038021c8                vex::controller::button::_buttonToPressedEvent() const
+                0x03802180       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03802180                vex::controller::button::_buttonToPressedEvent() const
  .text._ZNK3vex10controller6button22_buttonToReleasedEventEv
-                0x038021e8       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x038021e8                vex::controller::button::_buttonToReleasedEvent() const
+                0x038021a0       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038021a0                vex::controller::button::_buttonToReleasedEvent() const
  .text._ZN3vex10controller6buttonC2ENS0_11tButtonTypeEPS0_
-                0x03802208       0x48 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03802208                vex::controller::button::button(vex::controller::tButtonType, vex::controller*)
-                0x03802208                vex::controller::button::button(vex::controller::tButtonType, vex::controller*)
+                0x038021c0       0x48 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038021c0                vex::controller::button::button(vex::controller::tButtonType, vex::controller*)
+                0x038021c0                vex::controller::button::button(vex::controller::tButtonType, vex::controller*)
  .text._ZNK3vex10controller4axis5valueEv
-                0x03802250       0x58 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03802250                vex::controller::axis::value() const
+                0x03802208       0x58 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03802208                vex::controller::axis::value() const
  .text._ZNK3vex10controller4axis8positionENS_12percentUnitsE
-                0x038022a8       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x038022a8                vex::controller::axis::position(vex::percentUnits) const
+                0x03802260       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03802260                vex::controller::axis::position(vex::percentUnits) const
  .text._ZNK3vex10controller4axis23_joystickToChangedEventEv
-                0x038022c4       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x038022c4                vex::controller::axis::_joystickToChangedEvent() const
+                0x0380227c       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x0380227c                vex::controller::axis::_joystickToChangedEvent() const
  .text._ZN3vex10controller4axisC2ENS0_9tAxisTypeEPS0_
-                0x038022e4       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x038022e4                vex::controller::axis::axis(vex::controller::tAxisType, vex::controller*)
-                0x038022e4                vex::controller::axis::axis(vex::controller::tAxisType, vex::controller*)
+                0x0380229c       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x0380229c                vex::controller::axis::axis(vex::controller::tAxisType, vex::controller*)
+                0x0380229c                vex::controller::axis::axis(vex::controller::tAxisType, vex::controller*)
  .text._ZN3vex10controllerC2ENS_14controllerTypeE
-                0x03802310      0x16c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03802310                vex::controller::controller(vex::controllerType)
-                0x03802310                vex::controller::controller(vex::controllerType)
+                0x038022c8      0x16c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038022c8                vex::controller::controller(vex::controllerType)
+                0x038022c8                vex::controller::controller(vex::controllerType)
  .text._ZN3vex10controller3lcd15getControllerIdEv
-                0x0380247c       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x0380247c                vex::controller::lcd::getControllerId()
+                0x03802434       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03802434                vex::controller::lcd::getControllerId()
  .text._ZN3vex10controller3lcd5printEPKcz
-                0x0380248c       0x80 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x0380248c                vex::controller::lcd::print(char const*, ...)
+                0x03802444       0x80 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03802444                vex::controller::lcd::print(char const*, ...)
  .text._ZN3vex11this_thread9sleep_forEm
-                0x0380250c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_thread.cpp.obj)
-                0x0380250c                vex::this_thread::sleep_for(unsigned long)
+                0x038024c4        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_thread.cpp.obj)
+                0x038024c4                vex::this_thread::sleep_for(unsigned long)
  .text._ZN3vex5event4initEmmPFvvE
-                0x03802510        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
-                0x03802510                vex::event::init(unsigned long, unsigned long, void (*)())
+                0x038024c8        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
+                0x038024c8                vex::event::init(unsigned long, unsigned long, void (*)())
  .text._ZN3vex5event4initEmmPFvPvES1_
-                0x03802514        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
-                0x03802514                vex::event::init(unsigned long, unsigned long, void (*)(void*), void*)
+                0x038024cc        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
+                0x038024cc                vex::event::init(unsigned long, unsigned long, void (*)(void*), void*)
  .text._ZN3vex5event9userindexEv
-                0x03802518        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
-                0x03802518                vex::event::userindex()
+                0x038024d0        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
+                0x038024d0                vex::event::userindex()
  .text._ZZN3vex6meventC4EmmENUlvE_4_FUNEv
-                0x0380251c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_mevent.cpp.obj)
+                0x038024d4        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_mevent.cpp.obj)
  .text._ZN3vex6meventC2Emm
-                0x03802520       0x70 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_mevent.cpp.obj)
-                0x03802520                vex::mevent::mevent(unsigned long, unsigned long)
-                0x03802520                vex::mevent::mevent(unsigned long, unsigned long)
+                0x038024d8       0x70 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_mevent.cpp.obj)
+                0x038024d8                vex::mevent::mevent(unsigned long, unsigned long)
+                0x038024d8                vex::mevent::mevent(unsigned long, unsigned long)
  .text._ZN3vex5brain9_getIndexEv
-                0x03802590       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x03802590                vex::brain::_getIndex()
+                0x03802548       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03802548                vex::brain::_getIndex()
  .text._ZN3vex5brain5timerENS_9timeUnitsE
-                0x038025a0        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038025a0                vex::brain::timer(vex::timeUnits)
+                0x03802558        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03802558                vex::brain::timer(vex::timeUnits)
  .text._ZN3vex5brain10resetTimerEv
-                0x038025a8        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038025a8                vex::brain::resetTimer()
+                0x03802560        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03802560                vex::brain::resetTimer()
  .text._ZN3vex5brain3lcd9setCursorEll
-                0x038025b0       0x44 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038025b0                vex::brain::lcd::setCursor(long, long)
+                0x03802568       0x44 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03802568                vex::brain::lcd::setCursor(long, long)
  .text._ZN3vex5brain3lcd7setFontENS_8fontTypeE
-                0x038025f4      0x23c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038025f4                vex::brain::lcd::setFont(vex::fontType)
+                0x038025ac      0x23c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x038025ac                vex::brain::lcd::setFont(vex::fontType)
  .text._ZN3vex5brain3lcdC2Ev
-                0x03802830       0x94 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x03802830                vex::brain::lcd::lcd()
-                0x03802830                vex::brain::lcd::lcd()
+                0x038027e8       0x94 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x038027e8                vex::brain::lcd::lcd()
+                0x038027e8                vex::brain::lcd::lcd()
  .text._ZN3vex5brainC2Ev
-                0x038028c4       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038028c4                vex::brain::brain()
-                0x038028c4                vex::brain::brain()
+                0x0380287c       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x0380287c                vex::brain::brain()
+                0x0380287c                vex::brain::brain()
  .text._ZN3vex5brain3lcd10rowToPixelEl
-                0x03802900       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x03802900                vex::brain::lcd::rowToPixel(long)
+                0x038028b8       0x34 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x038028b8                vex::brain::lcd::rowToPixel(long)
  .text._ZN3vex5brain3lcd5printEPKcz
-                0x03802934       0xb8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x03802934                vex::brain::lcd::print(char const*, ...)
+                0x038028ec       0xb8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x038028ec                vex::brain::lcd::print(char const*, ...)
  .text._ZN3vex5brainD2Ev
-                0x038029ec       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038029ec                vex::brain::~brain()
-                0x038029ec                vex::brain::~brain()
+                0x038029a4       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x038029a4                vex::brain::~brain()
+                0x038029a4                vex::brain::~brain()
  .text._ZN3vex11competition8_disableEPv
-                0x03802a0c       0xa4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03802a0c                vex::competition::_disable(void*)
+                0x038029c4       0xa4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x038029c4                vex::competition::_disable(void*)
  .text._ZN3vex11competition11_autonomousEv
-                0x03802ab0       0x80 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03802ab0                vex::competition::_autonomous()
+                0x03802a68       0x80 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03802a68                vex::competition::_autonomous()
  .text._ZN3vex11competition14_drivercontrolEv
-                0x03802b30       0x80 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03802b30                vex::competition::_drivercontrol()
+                0x03802ae8       0x80 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03802ae8                vex::competition::_drivercontrol()
  .text._ZN3vex11competitionC2Ev
-                0x03802bb0      0x13c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03802bb0                vex::competition::competition()
-                0x03802bb0                vex::competition::competition()
+                0x03802b68      0x13c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03802b68                vex::competition::competition()
+                0x03802b68                vex::competition::competition()
  .text._ZN3vex11competitionD2Ev
-                0x03802cec        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03802cec                vex::competition::~competition()
-                0x03802cec                vex::competition::~competition()
+                0x03802ca4        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03802ca4                vex::competition::~competition()
+                0x03802ca4                vex::competition::~competition()
  .text._ZN3vex11competition10autonomousEPFvvE
-                0x03802cf0       0x44 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03802cf0                vex::competition::autonomous(void (*)())
+                0x03802ca8       0x44 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03802ca8                vex::competition::autonomous(void (*)())
  .text._ZN3vex11competition13drivercontrolEPFvvE
-                0x03802d34       0x44 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03802d34                vex::competition::drivercontrol(void (*)())
+                0x03802cec       0x44 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03802cec                vex::competition::drivercontrol(void (*)())
  .text._ZN3vex7triportD2Ev
-                0x03802d78       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03802d78                vex::triport::~triport()
-                0x03802d78                vex::triport::~triport()
+                0x03802d30       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802d30                vex::triport::~triport()
+                0x03802d30                vex::triport::~triport()
  .text._ZN3vex7triportD0Ev
-                0x03802db0       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03802db0                vex::triport::~triport()
+                0x03802d68       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802d68                vex::triport::~triport()
  .text._ZN3vex7triport9installedEv
-                0x03802dcc       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03802dcc                vex::triport::installed()
+                0x03802d84       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802d84                vex::triport::installed()
  .text._ZN3vex7triport4portC2ElPS0_
-                0x03802de4       0x74 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03802de4                vex::triport::port::port(long, vex::triport*)
-                0x03802de4                vex::triport::port::port(long, vex::triport*)
+                0x03802d9c       0x74 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802d9c                vex::triport::port::port(long, vex::triport*)
+                0x03802d9c                vex::triport::port::port(long, vex::triport*)
  .text._ZN3vex7triportC2El
-                0x03802e58       0xf0 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03802e58                vex::triport::triport(long)
-                0x03802e58                vex::triport::triport(long)
+                0x03802e10       0xf0 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802e10                vex::triport::triport(long)
+                0x03802e10                vex::triport::triport(long)
  .text._ZN3vex7triport4port4typeENS_11triportTypeE
-                0x03802f48       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03802f48                vex::triport::port::type(vex::triportType)
+                0x03802f00       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802f00                vex::triport::port::type(vex::triportType)
  .text._ZN3vex7triport4port4typeEv
-                0x03802f78       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03802f78                vex::triport::port::type()
+                0x03802f30       0x38 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802f30                vex::triport::port::type()
  .text._ZN3vex7triport4port5valueEl
-                0x03802fb0       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03802fb0                vex::triport::port::value(long)
+                0x03802f68       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802f68                vex::triport::port::value(long)
  .text._ZN3vex11__trideviceC2ERNS_7triport4portENS_11triportTypeE
-                0x03802fc8       0x5c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03802fc8                vex::__tridevice::__tridevice(vex::triport::port&, vex::triportType)
-                0x03802fc8                vex::__tridevice::__tridevice(vex::triport::port&, vex::triportType)
+                0x03802f80       0x5c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802f80                vex::__tridevice::__tridevice(vex::triport::port&, vex::triportType)
+                0x03802f80                vex::__tridevice::__tridevice(vex::triport::port&, vex::triportType)
  .text._ZN3vex11digital_outC2ERNS_7triport4portE
-                0x03803024       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03803024                vex::digital_out::digital_out(vex::triport::port&)
-                0x03803024                vex::digital_out::digital_out(vex::triport::port&)
+                0x03802fdc       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802fdc                vex::digital_out::digital_out(vex::triport::port&)
+                0x03802fdc                vex::digital_out::digital_out(vex::triport::port&)
  .text._ZN3vex11digital_out3setEb
-                0x0380303c        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x0380303c                vex::digital_out::set(bool)
+                0x03802ff4        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802ff4                vex::digital_out::set(bool)
  .text._ZN3vex10pneumaticsC2ERNS_7triport4portE
-                0x03803044       0x14 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03803044                vex::pneumatics::pneumatics(vex::triport::port&)
-                0x03803044                vex::pneumatics::pneumatics(vex::triport::port&)
+                0x03802ffc       0x14 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802ffc                vex::pneumatics::pneumatics(vex::triport::port&)
+                0x03802ffc                vex::pneumatics::pneumatics(vex::triport::port&)
  .text._ZN3vex10pneumaticsD2Ev
-                0x03803058        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03803058                vex::pneumatics::~pneumatics()
-                0x03803058                vex::pneumatics::~pneumatics()
+                0x03803010        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03803010                vex::pneumatics::~pneumatics()
+                0x03803010                vex::pneumatics::~pneumatics()
  .text._ZN3vex10pneumatics4openEv
-                0x0380305c        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x0380305c                vex::pneumatics::open()
+                0x03803014        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03803014                vex::pneumatics::open()
  .text._ZN3vex10pneumatics5closeEv
-                0x03803064        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03803064                vex::pneumatics::close()
+                0x0380301c        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x0380301c                vex::pneumatics::close()
  .text._ZN3vex5colorD2Ev
-                0x0380306c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x0380306c                vex::color::~color()
-                0x0380306c                vex::color::~color()
+                0x03803024        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03803024                vex::color::~color()
+                0x03803024                vex::color::~color()
  .text._ZNK3vex5colorcvmEv
-                0x03803070        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03803070                vex::color::operator unsigned long() const
+                0x03803028        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03803028                vex::color::operator unsigned long() const
  .text.startup._GLOBAL__sub_I__ZN3vex5color5blackE
-                0x03803078      0x164 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03803030      0x164 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
  .text._ZN3vex5timerD2Ev
-                0x038031dc        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
-                0x038031dc                vex::timer::~timer()
-                0x038031dc                vex::timer::~timer()
+                0x03803194        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
+                0x03803194                vex::timer::~timer()
+                0x03803194                vex::timer::~timer()
  .text._ZN3vex5timer5clearEv
-                0x038031e0       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
-                0x038031e0                vex::timer::clear()
+                0x03803198       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
+                0x03803198                vex::timer::clear()
  .text._ZN3vex5timerC2Ev
-                0x038031fc       0x14 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
-                0x038031fc                vex::timer::timer()
-                0x038031fc                vex::timer::timer()
+                0x038031b4       0x14 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
+                0x038031b4                vex::timer::timer()
+                0x038031b4                vex::timer::timer()
  .text._ZNK3vex5timer4timeENS_9timeUnitsE
-                0x03803210       0x40 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
-                0x03803210                vex::timer::time(vex::timeUnits) const
+                0x038031c8       0x40 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
+                0x038031c8                vex::timer::time(vex::timeUnits) const
  .text.vexAdiPortConfigSet
-                0x03803250       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03803250                vexAdiPortConfigSet
+                0x03803208       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03803208                vexAdiPortConfigSet
  .text.vexAdiPortConfigGet
-                0x03803278       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03803278                vexAdiPortConfigGet
+                0x03803230       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03803230                vexAdiPortConfigGet
  .text.vexAdiValueSet
-                0x038032a0       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038032a0                vexAdiValueSet
+                0x03803258       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03803258                vexAdiValueSet
  .text.vexMotorVelocitySet
-                0x038032c8       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038032c8                vexMotorVelocitySet
+                0x03803280       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03803280                vexMotorVelocitySet
  .text.vexMotorVoltageSet
-                0x038032e8       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038032e8                vexMotorVoltageSet
+                0x038032a0       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x038032a0                vexMotorVoltageSet
  .text.vexMotorActualVelocityGet
-                0x03803308       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03803308                vexMotorActualVelocityGet
+                0x038032c0       0x24 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x038032c0                vexMotorActualVelocityGet
  .text.vexMotorReverseFlagSet
-                0x0380332c       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380332c                vexMotorReverseFlagSet
+                0x038032e4       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x038032e4                vexMotorReverseFlagSet
  .text.vexMotorBrakeModeSet
-                0x0380334c       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380334c                vexMotorBrakeModeSet
+                0x03803304       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03803304                vexMotorBrakeModeSet
  .text.vexMotorPositionSet
-                0x0380336c       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380336c                vexMotorPositionSet
+                0x03803324       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03803324                vexMotorPositionSet
  .text.vexMotorGearingSet
-                0x03803394       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03803394                vexMotorGearingSet
+                0x0380334c       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380334c                vexMotorGearingSet
  .text.vexMotorGearingGet
-                0x038033b4       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038033b4                vexMotorGearingGet
+                0x0380336c       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380336c                vexMotorGearingGet
  .text.vexVisionModeSet
-                0x038033cc       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038033cc                vexVisionModeSet
+                0x03803384       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03803384                vexVisionModeSet
  .text.vexVisionObjectCountGet
-                0x038033ec       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038033ec                vexVisionObjectCountGet
+                0x038033a4       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x038033a4                vexVisionObjectCountGet
  .text.vexVisionObjectGet
-                0x03803404       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03803404                vexVisionObjectGet
+                0x038033bc       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x038033bc                vexVisionObjectGet
  .text.vexVisionLedModeSet
-                0x0380342c       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380342c                vexVisionLedModeSet
+                0x038033e4       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x038033e4                vexVisionLedModeSet
  .text.vexVisionLedColorSet
-                0x0380344c       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380344c                vexVisionLedColorSet
+                0x03803404       0x2c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03803404                vexVisionLedColorSet
  .text.vexEventMaskSet
-                0x03803478       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03803478                vexEventMaskSet
+                0x03803430       0x28 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03803430                vexEventMaskSet
  .text.vexEventMaskGet
-                0x038034a0       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038034a0                vexEventMaskGet
+                0x03803458       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03803458                vexEventMaskGet
  .text._ZN3vex6deviceD2Ev
-                0x038034b8        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x038034b8                vex::device::~device()
-                0x038034b8                vex::device::~device()
+                0x03803470        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03803470                vex::device::~device()
+                0x03803470                vex::device::~device()
  .text._ZN3vex6device5valueEv
-                0x038034bc        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x038034bc                vex::device::value()
+                0x03803474        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03803474                vex::device::value()
  .text._ZN3vex6deviceD0Ev
-                0x038034c4       0x14 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x038034c4                vex::device::~device()
+                0x0380347c       0x14 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x0380347c                vex::device::~device()
  .text._ZN3vex6device4initEl
-                0x038034d8       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x038034d8                vex::device::init(long)
+                0x03803490       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03803490                vex::device::init(long)
  .text._ZN3vex6deviceC2El
-                0x03803508       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x03803508                vex::device::device(long)
-                0x03803508                vex::device::device(long)
+                0x038034c0       0x20 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x038034c0                vex::device::device(long)
+                0x038034c0                vex::device::device(long)
  .text._ZN3vex6device4typeEv
-                0x03803528       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x03803528                vex::device::type()
+                0x038034e0       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x038034e0                vex::device::type()
  .text._ZN3vex6device9installedEv
-                0x03803538       0x14 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x03803538                vex::device::installed()
+                0x038034f0       0x14 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x038034f0                vex::device::installed()
  .text._ZN3vex4taskC2EPFivE
-                0x0380354c       0x5c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x0380354c                vex::task::task(int (*)())
-                0x0380354c                vex::task::task(int (*)())
+                0x03803504       0x5c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03803504                vex::task::task(int (*)())
+                0x03803504                vex::task::task(int (*)())
  .text._ZN3vex4taskD2Ev
-                0x038035a8        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x038035a8                vex::task::~task()
-                0x038035a8                vex::task::~task()
+                0x03803560        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03803560                vex::task::~task()
+                0x03803560                vex::task::~task()
  .text._ZN3vex4task4stopEPvi
-                0x038035ac       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x038035ac                vex::task::stop(void*, int)
+                0x03803564       0x1c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03803564                vex::task::stop(void*, int)
  .text._ZN3vex4task6_indexEPFivE
-                0x038035c8       0x14 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x038035c8                vex::task::_index(int (*)())
+                0x03803580       0x14 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03803580                vex::task::_index(int (*)())
  .text._ZN3vex4task8_stopAllEv
-                0x038035dc       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x038035dc                vex::task::_stopAll()
+                0x03803594       0x3c c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03803594                vex::task::_stopAll()
  .text.__libc_fini_array
-                0x03803618       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-fini.o)
-                0x03803618                __libc_fini_array
+                0x038035d0       0x30 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-fini.o)
+                0x038035d0                __libc_fini_array
  .text.__libc_init_array
-                0x03803648       0x58 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-init.o)
-                0x03803648                __libc_init_array
+                0x03803600       0x58 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-init.o)
+                0x03803600                __libc_init_array
  .text.__libc_init_array.__stub
-                0x038036a0       0x18 linker stubs
+                0x03803658       0x18 linker stubs
  *(.gnu.linkonce.t.*)
  *(.plt)
  *(.gnu_warning)
@@ -3526,10 +3529,10 @@ Linker script and memory map
  *(.ARM.extab)
  *(.gnu.linkonce.armextab.*)
 
-.v4_bx          0x038036b8        0x0
+.v4_bx          0x03803670        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x038036b8        0x0
+.iplt           0x03803670        0x0
  .iplt          0x00000000        0x0 build/src/main.o
 
 .init
@@ -3538,205 +3541,205 @@ Linker script and memory map
 .fini
  *(.fini)
 
-.rodata         0x038036b8      0x1f8
-                0x038036b8                __rodata_start = .
+.rodata         0x03803670      0x1f8
+                0x03803670                __rodata_start = .
  *(.rodata)
  *(.rodata.*)
  .rodata.str1.1
-                0x038036b8       0x25 build/src/autonomous.o
+                0x03803670       0x25 build/src/autonomous.o
  .rodata.str1.1
-                0x038036dd       0x67 build/src/robot_controls.o
+                0x03803695       0x67 build/src/robot_controls.o
  .rodata.str1.1
-                0x03803744       0x2e c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
- *fill*         0x03803772        0x2 
+                0x038036fc       0x2e c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+ *fill*         0x0380372a        0x2 
  .rodata._ZN3vex6PORT20E
-                0x03803774        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03803774                vex::PORT20
+                0x0380372c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x0380372c                vex::PORT20
  .rodata._ZN3vex3fwdE
-                0x03803778        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03803778                vex::fwd
+                0x03803730        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803730                vex::fwd
  .rodata._ZN3vex5PORT1E
-                0x0380377c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x0380377c                vex::PORT1
+                0x03803734        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803734                vex::PORT1
  .rodata._ZN3vex5PORT5E
-                0x03803780        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03803780                vex::PORT5
+                0x03803738        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803738                vex::PORT5
  .rodata._ZN3vex7forwardE
-                0x03803784        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03803784                vex::forward
+                0x0380373c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x0380373c                vex::forward
  .rodata._ZN3vex3pctE
-                0x03803788        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03803788                vex::pct
+                0x03803740        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803740                vex::pct
  .rodata._ZN3vex3secE
-                0x0380378c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x0380378c                vex::sec
+                0x03803744        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803744                vex::sec
  .rodata._ZN3vex3redE
-                0x03803790        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03803790                vex::red
+                0x03803748        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803748                vex::red
  .rodata._ZN3vex4msecE
-                0x03803794        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03803794                vex::msec
+                0x0380374c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x0380374c                vex::msec
  .rodata._ZN3vex9ratio36_1E
-                0x03803798        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03803798                vex::ratio36_1
+                0x03803750        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803750                vex::ratio36_1
  .rodata._ZN3vex4blueE
-                0x0380379c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x0380379c                vex::blue
+                0x03803754        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803754                vex::blue
  .rodata._ZN3vex5PORT2E
-                0x038037a0        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038037a0                vex::PORT2
+                0x03803758        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803758                vex::PORT2
  .rodata._ZN3vex6PORT11E
-                0x038037a4        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038037a4                vex::PORT11
+                0x0380375c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x0380375c                vex::PORT11
  .rodata._ZN3vex5PORT6E
-                0x038037a8        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038037a8                vex::PORT6
+                0x03803760        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803760                vex::PORT6
  .rodata._ZN3vex7primaryE
-                0x038037ac        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038037ac                vex::primary
+                0x03803764        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803764                vex::primary
  .rodata._ZN3vex6PORT19E
-                0x038037b0        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038037b0                vex::PORT19
+                0x03803768        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803768                vex::PORT19
  .rodata._ZN3vex6PORT22E
-                0x038037b4        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038037b4                vex::PORT22
+                0x0380376c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x0380376c                vex::PORT22
  .rodata._ZN3vex5PORT7E
-                0x038037b8        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038037b8                vex::PORT7
+                0x03803770        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803770                vex::PORT7
  .rodata._ZN3vex8ratio6_1E
-                0x038037bc        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038037bc                vex::ratio6_1
+                0x03803774        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803774                vex::ratio6_1
  .rodata._ZN3vex5brakeE
-                0x038037c0        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038037c0                vex::brake
+                0x03803778        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803778                vex::brake
  .rodata._ZN3vex5coastE
-                0x038037c4        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038037c4                vex::coast
+                0x0380377c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x0380377c                vex::coast
  .rodata._ZN3vex5PORT4E
-                0x038037c8        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x038037c8                vex::PORT4
- *fill*         0x038037cc        0x4 
+                0x03803780        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803780                vex::PORT4
+ *fill*         0x03803784        0x4 
  .rodata._ZTVN3vex5motorE
-                0x038037d0       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x038037d0                vtable for vex::motor
+                0x03803788       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03803788                vtable for vex::motor
  .rodata._ZTVN3vex6visionE
-                0x038037e8       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
-                0x038037e8                vtable for vex::vision
+                0x038037a0       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x038037a0                vtable for vex::vision
  .rodata.CSWTCH.16
-                0x03803800        0xb c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038037b8        0xb c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
  .rodata.CSWTCH.18
-                0x0380380b        0xb c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038037c3        0xb c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
  .rodata.CSWTCH.24
-                0x03803816        0x3 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038037ce        0x3 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
  .rodata.str1.1
-                0x03803819       0x2d c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
- *fill*         0x03803846        0x2 
+                0x038037d1       0x2d c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+ *fill*         0x038037fe        0x2 
  .rodata._ZTVN3vex7triportE
-                0x03803848       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03803848                vtable for vex::triport
+                0x03803800       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03803800                vtable for vex::triport
  .rodata.CSWTCH.39
-                0x03803860        0xe c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03803818        0xe c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
  .rodata.CSWTCH.44
-                0x0380386e       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
- *fill*         0x0380387e        0x2 
+                0x03803826       0x10 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+ *fill*         0x03803836        0x2 
  .rodata._ZTVN3vex6deviceE
-                0x03803880       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x03803880                vtable for vex::device
+                0x03803838       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03803838                vtable for vex::device
  .rodata.str1.1
-                0x03803898       0x14 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03803850       0x14 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
  .rodata.str1.4
-                0x038038ac        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
+                0x03803864        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
                                   0x2 (size before relaxing)
  *(.gnu.linkonce.r.*)
-                0x038038b0                __rodata_end = .
+                0x03803868                __rodata_end = .
 
-.rodata1        0x038038b0        0x0
-                0x038038b0                __rodata1_start = .
+.rodata1        0x03803868        0x0
+                0x03803868                __rodata1_start = .
  *(.rodata1)
  *(.rodata1.*)
-                0x038038b0                __rodata1_end = .
+                0x03803868                __rodata1_end = .
 
-.sdata2         0x038038b0        0x0
-                0x038038b0                __sdata2_start = .
+.sdata2         0x03803868        0x0
+                0x03803868                __sdata2_start = .
  *(.sdata2)
  *(.sdata2.*)
  *(.gnu.linkonce.s2.*)
-                0x038038b0                __sdata2_end = .
+                0x03803868                __sdata2_end = .
 
-.sbss2          0x038038b0        0x0
-                0x038038b0                __sbss2_start = .
+.sbss2          0x03803868        0x0
+                0x03803868                __sbss2_start = .
  *(.sbss2)
  *(.sbss2.*)
  *(.gnu.linkonce.sb2.*)
-                0x038038b0                __sbss2_end = .
+                0x03803868                __sbss2_end = .
 
-.data           0x038038b0      0x43c
-                0x038038b0                __data_start = .
+.data           0x03803868      0x43c
+                0x03803868                __data_start = .
  *(.data)
  *(.data.*)
  .data.appRunning
-                0x038038b0        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x038038b0                appRunning
- .data.__yoff   0x038038b4        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03803868        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03803868                appRunning
+ .data.__yoff   0x0380386c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
  .data._ZN3vex24__default_motor_velocityE
-                0x038038b8        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x038038b8                vex::__default_motor_velocity
- *fill*         0x038038bc        0x4 
+                0x03803870        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03803870                vex::__default_motor_velocity
+ *fill*         0x03803874        0x4 
  .data.impure_data
-                0x038038c0      0x428 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
+                0x03803878      0x428 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
  .data._impure_ptr
-                0x03803ce8        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
-                0x03803ce8                _impure_ptr
+                0x03803ca0        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
+                0x03803ca0                _impure_ptr
  *(.gnu.linkonce.d.*)
  *(.jcr)
  *(.got)
  *(.got.plt)
-                0x03803cec                __data_end = .
+                0x03803ca4                __data_end = .
 
-.igot.plt       0x03803cec        0x0
+.igot.plt       0x03803ca4        0x0
  .igot.plt      0x00000000        0x0 build/src/main.o
 
-.data1          0x03803cec        0x0
-                0x03803cec                __data1_start = .
+.data1          0x03803ca4        0x0
+                0x03803ca4                __data1_start = .
  *(.data1)
  *(.data1.*)
-                0x03803cec                __data1_end = .
+                0x03803ca4                __data1_end = .
 
 .got
  *(.got)
 
-.ctors          0x03803cec        0x0
-                0x03803cec                __CTOR_LIST__ = .
-                0x03803cec                ___CTORS_LIST___ = .
+.ctors          0x03803ca4        0x0
+                0x03803ca4                __CTOR_LIST__ = .
+                0x03803ca4                ___CTORS_LIST___ = .
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x03803cec                __CTOR_END__ = .
-                0x03803cec                ___CTORS_END___ = .
+                0x03803ca4                __CTOR_END__ = .
+                0x03803ca4                ___CTORS_END___ = .
 
-.dtors          0x03803cec        0x0
-                0x03803cec                __DTOR_LIST__ = .
-                0x03803cec                ___DTORS_LIST___ = .
+.dtors          0x03803ca4        0x0
+                0x03803ca4                __DTOR_LIST__ = .
+                0x03803ca4                ___DTORS_LIST___ = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x03803cec                __DTOR_END__ = .
-                0x03803cec                ___DTORS_END___ = .
+                0x03803ca4                __DTOR_END__ = .
+                0x03803ca4                ___DTORS_END___ = .
 
-.fixup          0x03803cec        0x0
-                0x03803cec                __fixup_start = .
+.fixup          0x03803ca4        0x0
+                0x03803ca4                __fixup_start = .
  *(.fixup)
-                0x03803cec                __fixup_end = .
+                0x03803ca4                __fixup_end = .
 
 .eh_frame
  *(.eh_frame)
 
-.eh_framehdr    0x03803cec        0x0
-                0x03803cec                __eh_framehdr_start = .
+.eh_framehdr    0x03803ca4        0x0
+                0x03803ca4                __eh_framehdr_start = .
  *(.eh_framehdr)
-                0x03803cec                __eh_framehdr_end = .
+                0x03803ca4                __eh_framehdr_end = .
 
 .gcc_except_table
  *(.gcc_except_table)
@@ -3746,309 +3749,312 @@ Linker script and memory map
  *(.mmu_tbl)
                 0x03804000                __mmu_tbl_end = .
 
-.ARM.exidx      0x03803cec        0x8
-                0x03803cec                __exidx_start = .
+.ARM.exidx      0x03803ca4        0x8
+                0x03803ca4                __exidx_start = .
  *(.ARM.exidx*)
  .ARM.exidx.text.main
-                0x03803cec        0x8 build/src/main.o
+                0x03803ca4        0x8 build/src/main.o
  .ARM.exidx.text._GLOBAL__sub_I_main.cpp
-                0x03803cf4        0x0 build/src/main.o
+                0x03803cac        0x0 build/src/main.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z6cameraf
+                0x03803cac        0x0 build/src/autonomous.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z10autonomousv
-                0x03803cf4        0x0 build/src/autonomous.o
+                0x03803cac        0x0 build/src/autonomous.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z11drive_curved
-                0x03803cf4        0x0 build/src/drive.o
+                0x03803cac        0x0 build/src/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z5driveddd
-                0x03803cf4        0x0 build/src/drive.o
+                0x03803cac        0x0 build/src/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z11drive_brakeN3vex9brakeTypeE
-                0x03803cf4        0x0 build/src/drive.o
+                0x03803cac        0x0 build/src/drive.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._GLOBAL__sub_I_robot_config.cpp
-                0x03803cf4        0x0 build/src/robot_config.o
+                0x03803cac        0x0 build/src/robot_config.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z13devices_checkv
-                0x03803cf4        0x0 build/src/robot_controls.o
+                0x03803cac        0x0 build/src/robot_controls.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z11usercontrolv
-                0x03803cf4        0x0 build/src/robot_controls.o
+                0x03803cac        0x0 build/src/robot_controls.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z12arm_controls9Arm_State10Cyl_states
-                0x03803cf4        0x0 build/src/robot_controls.o
+                0x03803cac        0x0 build/src/robot_controls.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z14clamp_controls10Cyl_states
-                0x03803cf4        0x0 build/src/robot_controls.o
+                0x03803cac        0x0 build/src/robot_controls.o
                                   0x8 (size before relaxing)
  *(.gnu.linkonce.armexidix.*.*)
-                0x03803cf4                __exidx_end = .
+                0x03803cac                __exidx_end = .
 
-.rel.dyn        0x03803cf4        0x0
+.rel.dyn        0x03803cac        0x0
  .rel.iplt      0x00000000        0x0 build/src/main.o
 
-.preinit_array  0x03803cf4        0x0
-                0x03803cf4                __preinit_array_start = .
+.preinit_array  0x03803cac        0x0
+                0x03803cac                __preinit_array_start = .
  *(SORT(.preinit_array.*))
  *(.preinit_array)
-                0x03803cf4                __preinit_array_end = .
+                0x03803cac                __preinit_array_end = .
 
-.init_array     0x03803cf4        0xc
-                0x03803cf4                __init_array_start = .
+.init_array     0x03803cac        0xc
+                0x03803cac                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x03803cf4        0x4 build/src/main.o
- .init_array    0x03803cf8        0x4 build/src/robot_config.o
- .init_array    0x03803cfc        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03803d00                __init_array_end = .
+ .init_array    0x03803cac        0x4 build/src/main.o
+ .init_array    0x03803cb0        0x4 build/src/robot_config.o
+ .init_array    0x03803cb4        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03803cb8                __init_array_end = .
 
-.fini_array     0x03803d00        0x0
-                0x03803d00                __fini_array_start = .
+.fini_array     0x03803cb8        0x0
+                0x03803cb8                __fini_array_start = .
  *(SORT(.fini_array.*))
  *(.fini_array)
-                0x03803d00                __fini_array_end = .
+                0x03803cb8                __fini_array_end = .
 
 .ARM.attributes
-                0x03803d00       0x3c
-                0x03803d00                __ARM.attributes_start = .
+                0x03803cb8       0x3c
+                0x03803cb8                __ARM.attributes_start = .
  *(.ARM.attributes)
  .ARM.attributes
-                0x03803d00       0x3a build/src/main.o
+                0x03803cb8       0x3a build/src/main.o
  .ARM.attributes
-                0x03803d3a       0x3a build/src/autonomous.o
+                0x03803cf2       0x3a build/src/autonomous.o
  .ARM.attributes
-                0x03803d74       0x3a build/src/drive.o
+                0x03803d2c       0x3a build/src/drive.o
  .ARM.attributes
-                0x03803dae       0x3a build/src/robot_config.o
+                0x03803d66       0x3a build/src/robot_config.o
  .ARM.attributes
-                0x03803de8       0x3a build/src/robot_controls.o
+                0x03803da0       0x3a build/src/robot_controls.o
  .ARM.attributes
-                0x03803e22       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03803dda       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
  .ARM.attributes
-                0x03803e57       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_util.c.obj)
+                0x03803e0f       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_util.c.obj)
  .ARM.attributes
-                0x03803e8c       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03803e44       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
  .ARM.attributes
-                0x03803ec1       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiversions.c.obj)
+                0x03803e79       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiversions.c.obj)
  .ARM.attributes
-                0x03803ef6       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03803eae       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
  .ARM.attributes
-                0x03803f2b       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03803ee3       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
  .ARM.attributes
-                0x03803f60       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
+                0x03803f18       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_vision.cpp.obj)
  .ARM.attributes
-                0x03803f95       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03803f4d       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
  .ARM.attributes
-                0x03803fca       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_thread.cpp.obj)
+                0x03803f82       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_thread.cpp.obj)
  .ARM.attributes
-                0x03803fff       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
+                0x03803fb7       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
  .ARM.attributes
-                0x03804034       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_mevent.cpp.obj)
+                0x03803fec       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_mevent.cpp.obj)
  .ARM.attributes
-                0x03804069       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03804021       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
  .ARM.attributes
-                0x0380409e       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03804056       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
  .ARM.attributes
-                0x038040d3       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x0380408b       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
  .ARM.attributes
-                0x03804108       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x038040c0       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
  .ARM.attributes
-                0x0380413d       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
+                0x038040f5       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
  .ARM.attributes
-                0x03804172       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380412a       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
  .ARM.attributes
-                0x038041a7       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x0380415f       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
  .ARM.attributes
-                0x038041dc       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03804194       0x35 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
  .ARM.attributes
-                0x03804211       0x2b c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-fini.o)
+                0x038041c9       0x2b c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-fini.o)
  .ARM.attributes
-                0x0380423c       0x2b c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
+                0x038041f4       0x2b c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
  .ARM.attributes
-                0x03804267       0x2b c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-init.o)
-                0x03804292                __ARM.attributes_end = .
+                0x0380421f       0x2b c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/gcc/libs\libc.a(lib_a-init.o)
+                0x0380424a                __ARM.attributes_end = .
 
-.sdata          0x03803d00        0x0
-                0x03803d00                __sdata_start = .
+.sdata          0x03803cb8        0x0
+                0x03803cb8                __sdata_start = .
  *(.sdata)
  *(.sdata.*)
  *(.gnu.linkonce.s.*)
-                0x03803d00                __sdata_end = .
+                0x03803cb8                __sdata_end = .
 
-.sbss           0x03803d00        0x0
-                0x03803d00                __sbss_start = .
+.sbss           0x03803cb8        0x0
+                0x03803cb8                __sbss_start = .
  *(.sbss)
  *(.sbss.*)
  *(.gnu.linkonce.sb.*)
-                0x03803d00                __sbss_end = .
+                0x03803cb8                __sbss_end = .
 
-.tdata          0x03803d00        0x0
-                0x03803d00                __tdata_start = .
+.tdata          0x03803cb8        0x0
+                0x03803cb8                __tdata_start = .
  *(.tdata)
  *(.tdata.*)
  *(.gnu.linkonce.td.*)
-                0x03803d00                __tdata_end = .
+                0x03803cb8                __tdata_end = .
 
-.tbss           0x03803d00        0x0
-                0x03803d00                __tbss_start = .
+.tbss           0x03803cb8        0x0
+                0x03803cb8                __tbss_start = .
  *(.tbss)
  *(.tbss.*)
  *(.gnu.linkonce.tb.*)
-                0x03803d00                __tbss_end = .
+                0x03803cb8                __tbss_end = .
 
-.bss            0x03803d00      0xd1c
-                0x03803d00                __bss_start = .
+.bss            0x03803cb8      0xd1c
+                0x03803cb8                __bss_start = .
  *(.bss)
  *(.bss.*)
  .bss.Competition
-                0x03803d00       0x28 build/src/main.o
-                0x03803d00                Competition
- .bss.Brain     0x03803d28      0x2bc build/src/robot_config.o
-                0x03803d28                Brain
+                0x03803cb8       0x28 build/src/main.o
+                0x03803cb8                Competition
+ .bss.Brain     0x03803ce0      0x2bc build/src/robot_config.o
+                0x03803ce0                Brain
  .bss.Controller
-                0x03803fe4      0x1ac build/src/robot_config.o
-                0x03803fe4                Controller
- .bss.LF        0x03804190       0x24 build/src/robot_config.o
-                0x03804190                LF
- .bss.LB        0x038041b4       0x24 build/src/robot_config.o
-                0x038041b4                LB
- .bss.RF        0x038041d8       0x24 build/src/robot_config.o
-                0x038041d8                RF
- .bss.RB        0x038041fc       0x24 build/src/robot_config.o
-                0x038041fc                RB
- .bss.left_arm  0x03804220       0x24 build/src/robot_config.o
-                0x03804220                left_arm
+                0x03803f9c      0x1ac build/src/robot_config.o
+                0x03803f9c                Controller
+ .bss.LF        0x03804148       0x24 build/src/robot_config.o
+                0x03804148                LF
+ .bss.LB        0x0380416c       0x24 build/src/robot_config.o
+                0x0380416c                LB
+ .bss.RF        0x03804190       0x24 build/src/robot_config.o
+                0x03804190                RF
+ .bss.RB        0x038041b4       0x24 build/src/robot_config.o
+                0x038041b4                RB
+ .bss.left_arm  0x038041d8       0x24 build/src/robot_config.o
+                0x038041d8                left_arm
  .bss.right_arm
-                0x03804244       0x24 build/src/robot_config.o
-                0x03804244                right_arm
+                0x038041fc       0x24 build/src/robot_config.o
+                0x038041fc                right_arm
  .bss.intake_arm
-                0x03804268       0x24 build/src/robot_config.o
-                0x03804268                intake_arm
+                0x03804220       0x24 build/src/robot_config.o
+                0x03804220                intake_arm
  .bss.intake_wheels
-                0x0380428c       0x24 build/src/robot_config.o
-                0x0380428c                intake_wheels
- .bss.conveyor  0x038042b0       0x24 build/src/robot_config.o
-                0x038042b0                conveyor
- .bss.clamp     0x038042d4       0x18 build/src/robot_config.o
-                0x038042d4                clamp
+                0x03804244       0x24 build/src/robot_config.o
+                0x03804244                intake_wheels
+ .bss.conveyor  0x03804268       0x24 build/src/robot_config.o
+                0x03804268                conveyor
+ .bss.clamp     0x0380428c       0x18 build/src/robot_config.o
+                0x0380428c                clamp
  .bss.arm_pistons
-                0x038042ec       0x18 build/src/robot_config.o
-                0x038042ec                arm_pistons
- *fill*         0x03804304        0x4 
- .bss.cam       0x03804308      0x690 build/src/robot_config.o
-                0x03804308                cam
+                0x038042a4       0x18 build/src/robot_config.o
+                0x038042a4                arm_pistons
+ *fill*         0x038042bc        0x4 
+ .bss.cam       0x038042c0      0x690 build/src/robot_config.o
+                0x038042c0                cam
  .bss.__dso_handle
-                0x03804998        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03804998                __dso_handle
+                0x03804950        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03804950                __dso_handle
  .bss.lastTime.10722
-                0x0380499c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03804954        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
  .bss._ZN3vex11competition22bStopTasksBetweenModesE
-                0x038049a0        0x1 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038049a0                vex::competition::bStopTasksBetweenModes
+                0x03804958        0x1 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03804958                vex::competition::bStopTasksBetweenModes
  .bss._ZN3vex11competition25bStopAllTasksBetweenModesE
-                0x038049a1        0x1 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038049a1                vex::competition::bStopAllTasksBetweenModes
+                0x03804959        0x1 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03804959                vex::competition::bStopAllTasksBetweenModes
  .bss._ZN3vex11competition14_auton_pendingE
-                0x038049a2        0x1 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038049a2                vex::competition::_auton_pending
- *fill*         0x038049a3        0x1 
+                0x0380495a        0x1 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x0380495a                vex::competition::_auton_pending
+ *fill*         0x0380495b        0x1 
  .bss._ZN3vex11competition20_autonomous_callbackE
-                0x038049a4        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038049a4                vex::competition::_autonomous_callback
+                0x0380495c        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x0380495c                vex::competition::_autonomous_callback
  .bss._ZN3vex11competition23_drivercontrol_callbackE
-                0x038049a8        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038049a8                vex::competition::_drivercontrol_callback
+                0x03804960        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03804960                vex::competition::_drivercontrol_callback
  .bss._ZN3vex11competition15_driver_pendingE
-                0x038049ac        0x1 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038049ac                vex::competition::_driver_pending
- *fill*         0x038049ad        0x3 
+                0x03804964        0x1 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03804964                vex::competition::_driver_pending
+ *fill*         0x03804965        0x3 
  .bss._ZN3vex5color6orangeE
-                0x038049b0        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038049b0                vex::color::orange
+                0x03804968        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03804968                vex::color::orange
  .bss._ZN3vex5color5blackE
-                0x038049b8        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038049b8                vex::color::black
+                0x03804970        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03804970                vex::color::black
  .bss._ZN3vex5color6yellowE
-                0x038049c0        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038049c0                vex::color::yellow
+                0x03804978        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03804978                vex::color::yellow
  .bss._ZN3vex5color5greenE
-                0x038049c8        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038049c8                vex::color::green
+                0x03804980        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03804980                vex::color::green
  .bss._ZN3vex5color6purpleE
-                0x038049d0        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038049d0                vex::color::purple
+                0x03804988        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03804988                vex::color::purple
  .bss._ZN3vex5color4cyanE
-                0x038049d8        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038049d8                vex::color::cyan
+                0x03804990        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03804990                vex::color::cyan
  .bss._ZN3vex5color4blueE
-                0x038049e0        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038049e0                vex::color::blue
+                0x03804998        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03804998                vex::color::blue
  .bss._ZN3vex5color3redE
-                0x038049e8        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038049e8                vex::color::red
+                0x038049a0        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x038049a0                vex::color::red
  .bss._ZN3vex5color11transparentE
-                0x038049f0        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038049f0                vex::color::transparent
+                0x038049a8        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x038049a8                vex::color::transparent
  .bss._ZN3vex5color5whiteE
-                0x038049f8        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x038049f8                vex::color::white
+                0x038049b0        0x8 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x038049b0                vex::color::white
  .bss._ZN3vex4task8_labelIdE
-                0x03804a00        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x03804a00                vex::task::_labelId
+                0x038049b8        0x4 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x038049b8                vex::task::_labelId
  *(.gnu.linkonce.b.*)
  *(COMMON)
- COMMON         0x03804a04       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03804a08                __vex_critical_section
-                0x03804a1c                __bss_end = .
-                0x03803d00                _SDA_BASE_ = (__sdata_start + ((__sbss_end - __sdata_start) / 0x2))
-                0x038038b0                _SDA2_BASE_ = (__sdata2_start + ((__sbss2_end - __sdata2_start) / 0x2))
+ COMMON         0x038049bc       0x18 c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x038049c0                __vex_critical_section
+                0x038049d4                __bss_end = .
+                0x03803cb8                _SDA_BASE_ = (__sdata_start + ((__sbss_end - __sdata_start) / 0x2))
+                0x03803868                _SDA2_BASE_ = (__sdata2_start + ((__sbss2_end - __sdata2_start) / 0x2))
 
-.heap           0x03804a1c   0x100004
-                0x03804a20                . = ALIGN (0x10)
- *fill*         0x03804a1c        0x4 
-                0x03804a20                _heap = .
-                0x03804a20                HeapBase = .
-                0x03804a20                _heap_start = .
-                0x03904a20                . = (. + _HEAP_SIZE)
- *fill*         0x03804a20   0x100000 
-                0x03904a20                _heap_end = .
-                0x03904a20                HeapLimit = .
+.heap           0x038049d4   0x10000c
+                0x038049e0                . = ALIGN (0x10)
+ *fill*         0x038049d4        0xc 
+                0x038049e0                _heap = .
+                0x038049e0                HeapBase = .
+                0x038049e0                _heap_start = .
+                0x039049e0                . = (. + _HEAP_SIZE)
+ *fill*         0x038049e0   0x100000 
+                0x039049e0                _heap_end = .
+                0x039049e0                HeapLimit = .
 
-.stack          0x03904a20     0x3800
-                0x03904a20                . = ALIGN (0x10)
-                0x03904a20                _stack_end = .
-                0x03906a20                . = (. + _STACK_SIZE)
- *fill*         0x03904a20     0x2000 
-                0x03906a20                . = ALIGN (0x10)
-                0x03906a20                _stack = .
-                0x03906a20                __stack = _stack
-                0x03906a20                . = ALIGN (0x10)
-                0x03906a20                _irq_stack_end = .
-                0x03906e20                . = (. + _IRQ_STACK_SIZE)
- *fill*         0x03906a20      0x400 
-                0x03906e20                . = ALIGN (0x10)
-                0x03906e20                __irq_stack = .
-                0x03906e20                _supervisor_stack_end = .
-                0x03907620                . = (. + _SUPERVISOR_STACK_SIZE)
- *fill*         0x03906e20      0x800 
-                0x03907620                . = ALIGN (0x10)
-                0x03907620                __supervisor_stack = .
-                0x03907620                _abort_stack_end = .
-                0x03907a20                . = (. + _ABORT_STACK_SIZE)
- *fill*         0x03907620      0x400 
-                0x03907a20                . = ALIGN (0x10)
-                0x03907a20                __abort_stack = .
-                0x03907a20                _fiq_stack_end = .
-                0x03907e20                . = (. + _FIQ_STACK_SIZE)
- *fill*         0x03907a20      0x400 
-                0x03907e20                . = ALIGN (0x10)
-                0x03907e20                __fiq_stack = .
-                0x03907e20                _undef_stack_end = .
-                0x03908220                . = (. + _UNDEF_STACK_SIZE)
- *fill*         0x03907e20      0x400 
-                0x03908220                . = ALIGN (0x10)
-                0x03908220                __undef_stack = .
-                0x03908220                _end = .
+.stack          0x039049e0     0x3800
+                0x039049e0                . = ALIGN (0x10)
+                0x039049e0                _stack_end = .
+                0x039069e0                . = (. + _STACK_SIZE)
+ *fill*         0x039049e0     0x2000 
+                0x039069e0                . = ALIGN (0x10)
+                0x039069e0                _stack = .
+                0x039069e0                __stack = _stack
+                0x039069e0                . = ALIGN (0x10)
+                0x039069e0                _irq_stack_end = .
+                0x03906de0                . = (. + _IRQ_STACK_SIZE)
+ *fill*         0x039069e0      0x400 
+                0x03906de0                . = ALIGN (0x10)
+                0x03906de0                __irq_stack = .
+                0x03906de0                _supervisor_stack_end = .
+                0x039075e0                . = (. + _SUPERVISOR_STACK_SIZE)
+ *fill*         0x03906de0      0x800 
+                0x039075e0                . = ALIGN (0x10)
+                0x039075e0                __supervisor_stack = .
+                0x039075e0                _abort_stack_end = .
+                0x039079e0                . = (. + _ABORT_STACK_SIZE)
+ *fill*         0x039075e0      0x400 
+                0x039079e0                . = ALIGN (0x10)
+                0x039079e0                __abort_stack = .
+                0x039079e0                _fiq_stack_end = .
+                0x03907de0                . = (. + _FIQ_STACK_SIZE)
+ *fill*         0x039079e0      0x400 
+                0x03907de0                . = ALIGN (0x10)
+                0x03907de0                __fiq_stack = .
+                0x03907de0                _undef_stack_end = .
+                0x039081e0                . = (. + _UNDEF_STACK_SIZE)
+ *fill*         0x03907de0      0x400 
+                0x039081e0                . = ALIGN (0x10)
+                0x039081e0                __undef_stack = .
+                0x039081e0                _end = .
 LOAD c:\Users\morga\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20240802_15_00_00/vexv5/stdlib_0.lib
 LOAD build/src/main.o
 LOAD build/src/autonomous.o

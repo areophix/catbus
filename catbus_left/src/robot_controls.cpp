@@ -61,9 +61,9 @@ Cyl_states clamp_controls(Cyl_states state) {
     if (state.arm) { // if arm cyl is open
       arm_pistons.close();
       state.arm = 0;
-      state.adj_spd = 125;
+      state.adj_spd = 150;
       this_thread::sleep_for(150);
-      drive(-50, -50, 250); // drive back 1/2 spd for 250ms
+      drive(-50, -50, 250);
       drive_brake(brake);
     }
     else {

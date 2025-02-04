@@ -38,11 +38,12 @@ void autonomous() {
     intake_wheels.spin(directionType::rev, 75, vex::velocityUnits::pct);
     this_thread::sleep_for(500);
     intake_wheels.stop();
-    drive(-60, 60, 500);
-    drive_brake(brake);
-    this_thread::sleep_for(200);
-    drive(60, 60, 1300);
-    drive_brake(coast);
+    // drive(-60, 60, 500);
+    
+    // drive_brake(brake);
+    // this_thread::sleep_for(200);
+    // drive(60, 60, 1300);
+    // drive_brake(coast);
     
     // starting wall stake scoring
     // arm_pistons.open();
