@@ -1,9 +1,4 @@
-#include "vex.h"
-#include "drive.h"
-#include <vector>
-
-using namespace vex;
-using namespace std;
+#include "robot_config.h"
 
 extern controller Controller;
 struct Cyl_states;

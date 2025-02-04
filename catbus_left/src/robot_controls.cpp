@@ -1,9 +1,5 @@
 #include "robot_controls.h"
-#include <vector>
-#include <iostream>
-
 using namespace vex;
-using namespace std;
 
 struct Cyl_states {
   int clamp;
@@ -11,9 +7,20 @@ struct Cyl_states {
   int adj_spd;
 };
 
+void devices_check() {
+  if (LF.installed() && RF.installed() && LB.installed() && RB.installed())
+  {
+    Controller.Screen.print("devices connected :D");
+  }
+  else
+  {
+    Controller.Screen.print("a device is disconnected D:");
+  }
+}
+
 void usercontrol(void) {  
   brakeType driveBrake = brake;
-  //devices_check(); 
+  devices_check(); 
   Arm_State arm_state = intake;
   Cyl_states cyl_state;
   cyl_state.clamp = 0;
@@ -21,7 +28,7 @@ void usercontrol(void) {
   cyl_state.adj_spd = 125;
  //closed  
   while (1) // keeps checking the controller in a loop to get updates on whether or not its being moved
-  { // the drive_brake, voltDrive, and driveCurve methods are in drive.cpp
+  {
     arm_state = arm_controls(arm_state, cyl_state);
     cyl_state = clamp_controls(cyl_state);
     if ((abs(Controller.Axis3.position(pct)) < 2) && (abs(Controller.Axis2.position(pct)) < 2)) {
@@ -36,17 +43,6 @@ void usercontrol(void) {
       }
     }
     this_thread::sleep_for(20); 
-  }
-}
-
-void devices_check() {
-  if (LF.installed() && RF.installed() && LB.installed() && RB.installed())
-  {
-    Controller.Screen.print("devices connected :D");
-  }
-  else
-  {
-    Controller.Screen.print("a device is disconnected D:");
   }
 }
 
